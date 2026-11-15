@@ -76,6 +76,7 @@ async function HomeContent() {
   const language = cookieStore.get("yenespot_app_language")?.value === "am" ? "am" : "en";
   const t = (english: string, amharic: string) => language === "am" ? amharic : english;
   const supabase = await createClient();
+  const { data: { user } } = await supabase.auth.getUser();
 
   // Load approved businesses for the homepage.
   const { data: featuredBusinesses } = await supabase
@@ -153,7 +154,7 @@ async function HomeContent() {
             >
               {t("For businesses", "ለንግዶች")}
             </a>
-            <HomeHeaderControls initialLanguage={language} />
+            <HomeHeaderControls initialLanguage={language} isLoggedIn={Boolean(user)} />
           </div>
         </div>
       </header>
