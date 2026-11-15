@@ -1,0 +1,19 @@
+﻿{
+  "name": "@yenespot/supabase",
+  "version": "1.0.0",
+  "private": true,
+  "sideEffects": false,
+  "types": "./src/index.ts",
+  "exports": {
+    ".": {
+      "types": "./src/index.ts",
+      "default": "./src/index.ts"
+    }
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.0.0"
+  }
+}
