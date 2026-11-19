@@ -113,7 +113,7 @@ export default async function SearchPage({
             href="/"
             className="text-sm font-semibold text-[#173B35] hover:underline"
           >
-            {t(language, "Back to home", "ወደ መነሻ ተመለስ")}
+            {t(language, "Back to home", "Ã¡â€¹Ë†Ã¡â€¹Â° Ã¡Ë†ËœÃ¡Å ÂÃ¡Ë†Â» Ã¡â€°Â°Ã¡Ë†ËœÃ¡Ë†Ë†Ã¡Ë†Âµ")}
           </Link>
         </div>
       </header>
@@ -121,15 +121,15 @@ export default async function SearchPage({
       <section className="bg-[#173B35] px-5 py-12 text-white">
         <div className="mx-auto max-w-7xl">
           <p className="text-sm font-bold uppercase tracking-widest text-[#D5A642]">
-            {t(language, "Discover local businesses", "የአካባቢዎን ንግዶች ያግኙ")}
+            {t(language, "Discover local businesses", "Ã¡â€¹Â¨Ã¡Å Â Ã¡Å Â«Ã¡â€°Â£Ã¡â€°Â¢Ã¡â€¹Å½Ã¡Å â€¢ Ã¡Å â€¢Ã¡Å’ÂÃ¡â€¹Â¶Ã¡â€°Â½ Ã¡â€¹Â«Ã¡Å’ÂÃ¡Å â„¢")}
           </p>
 
           <h1 className="mt-3 text-3xl font-extrabold sm:text-4xl">
-            {t(language, "Find your next favorite place.", "ቀጣዩን ተወዳጅ ቦታዎን ያግኙ።")}
+            {t(language, "Find your next favorite place.", "Ã¡â€°â‚¬Ã¡Å’Â£Ã¡â€¹Â©Ã¡Å â€¢ Ã¡â€°Â°Ã¡â€¹Ë†Ã¡â€¹Â³Ã¡Å’â€¦ Ã¡â€°Â¦Ã¡â€°Â³Ã¡â€¹Å½Ã¡Å â€¢ Ã¡â€¹Â«Ã¡Å’ÂÃ¡Å â„¢Ã¡ÂÂ¢")}
           </h1>
 
           <p className="mt-3 text-sm text-white/75">
-            {t(language, "Explore businesses in Jimma and beyond.", "በጅማና በሌሎች አካባቢዎች ያሉ ንግዶችን ይመልከቱ።")}
+            {t(language, "Explore businesses in Jimma and beyond.", "Ã¡â€°Â Ã¡Å’â€¦Ã¡Ë†â€ºÃ¡Å â€œ Ã¡â€°Â Ã¡Ë†Å’Ã¡Ë†Å½Ã¡â€°Â½ Ã¡Å Â Ã¡Å Â«Ã¡â€°Â£Ã¡â€°Â¢Ã¡â€¹Å½Ã¡â€°Â½ Ã¡â€¹Â«Ã¡Ë†â€° Ã¡Å â€¢Ã¡Å’ÂÃ¡â€¹Â¶Ã¡â€°Â½Ã¡Å â€¢ Ã¡â€¹Â­Ã¡Ë†ËœÃ¡Ë†ÂÃ¡Å Â¨Ã¡â€°Â±Ã¡ÂÂ¢")}
           </p>
 
           <form
@@ -140,17 +140,19 @@ export default async function SearchPage({
             <input
               type="search"
               name="q"
+              aria-label={t(language, "Business name or keyword", "Ã¡â€¹Â¨Ã¡Å â€¢Ã¡Å’Ã¡â€¹Âµ Ã¡Ë†ÂµÃ¡Ë† Ã¡â€¹Ë†Ã¡â€¹Â­Ã¡Ë† Ã¡â€°Ã¡Ë†Ã¡ Ã¡â€°Æ’Ã¡Ë†")}
               defaultValue={query}
-              placeholder={t(language, "Business name or keyword", "የንግድ ስም ወይም ቁልፍ ቃል")}
-              className="min-w-0 rounded-xl border border-[#E8E6DF] px-4 py-3 text-sm text-[#172B3A] outline-none focus:border-[#173B35] md:col-span-2"
+              placeholder={t(language, "Business name or keyword", "Ã¡â€¹Â¨Ã¡Å â€¢Ã¡Å’ÂÃ¡â€¹Âµ Ã¡Ë†ÂµÃ¡Ë†Â Ã¡â€¹Ë†Ã¡â€¹Â­Ã¡Ë†Â Ã¡â€°ÂÃ¡Ë†ÂÃ¡ÂÂ Ã¡â€°Æ’Ã¡Ë†Â")}
+              className="min-w-0 rounded-xl border border-[#E8E6DF] px-4 py-3 text-sm text-[#172B3A] outline-none focus:border-[#173B35] focus-visible:ring-2 focus-visible:ring-[#173B35] focus-visible:ring-offset-2 md:col-span-2"
             />
 
             <select
               name="category"
+              aria-label={t(language, "Business category", "Ã¡Ë†Ã¡â€¹ÂµÃ¡â€°Â¥ Ã¡Ë†Ã¡â€¹ÂµÃ¡â€°Â¥")}
               defaultValue={selectedCategory}
-              className="min-w-0 w-full rounded-xl border border-[#E8E6DF] px-4 py-3 text-sm text-[#172B3A] outline-none"
+              className="min-w-0 w-full rounded-xl border border-[#E8E6DF] px-4 py-3 text-sm text-[#172B3A] outline-none focus-visible:ring-2 focus-visible:ring-[#173B35] focus-visible:ring-offset-2"
             >
-              <option value="">{t(language, "All categories", "ሁሉም ምድቦች")}</option>
+              <option value="">{t(language, "All categories", "Ã¡Ë†ÂÃ¡Ë†â€°Ã¡Ë†Â Ã¡Ë†ÂÃ¡â€¹ÂµÃ¡â€°Â¦Ã¡â€°Â½")}</option>
               {categories?.map((category) => (
                 <option key={category.id} value={category.slug}>
                   {category.name}
@@ -161,31 +163,33 @@ export default async function SearchPage({
             <input
               type="text"
               name="city"
+              aria-label={t(language, "City", "Ã¡Å Â¨Ã¡â€°Â°Ã¡Ë†â€º")}
               defaultValue={city}
-              placeholder={t(language, "City", "ከተማ")}
-              className="min-w-0 w-full rounded-xl border border-[#E8E6DF] px-4 py-3 text-sm text-[#172B3A] outline-none focus:border-[#173B35]"
+              placeholder={t(language, "City", "Ã¡Å Â¨Ã¡â€°Â°Ã¡Ë†â€º")}
+              className="min-w-0 w-full rounded-xl border border-[#E8E6DF] px-4 py-3 text-sm text-[#172B3A] outline-none focus:border-[#173B35] focus-visible:ring-2 focus-visible:ring-[#173B35] focus-visible:ring-offset-2"
             />
 
             <input
               type="text"
               name="neighborhood"
+              aria-label={t(language, "Neighborhood", "Ã¡Ë†Â°Ã¡Ë†Ã¡Ë†Â­")}
               defaultValue={neighborhood}
-              placeholder={t(language, "Neighborhood", "ሰፈር")}
-              className="min-w-0 w-full rounded-xl border border-[#E8E6DF] px-4 py-3 text-sm text-[#172B3A] outline-none focus:border-[#173B35]"
+              placeholder={t(language, "Neighborhood", "Ã¡Ë†Â°Ã¡ÂË†Ã¡Ë†Â­")}
+              className="min-w-0 w-full rounded-xl border border-[#E8E6DF] px-4 py-3 text-sm text-[#172B3A] outline-none focus:border-[#173B35] focus-visible:ring-2 focus-visible:ring-[#173B35] focus-visible:ring-offset-2"
             />
 
             <button
               type="submit"
-              className="rounded-xl bg-[#D5A642] px-6 py-3 font-bold text-[#172B3A] transition hover:bg-[#E5BC62]"
+              className="rounded-xl bg-[#D5A642] px-6 py-3 font-bold text-[#172B3A] transition hover:bg-[#E5BC62] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#173B35] focus-visible:ring-offset-2"
             >
-              {t(language, "Search businesses", "ንግዶችን ፈልግ")}
+              {t(language, "Search businesses", "Ã¡Å â€¢Ã¡Å’ÂÃ¡â€¹Â¶Ã¡â€°Â½Ã¡Å â€¢ Ã¡ÂË†Ã¡Ë†ÂÃ¡Å’Â")}
             </button>
 
             <Link
               href="/search"
-              className="flex items-center justify-center rounded-xl border border-[#E8E6DF] px-5 py-3 text-sm font-semibold text-[#173B35]"
+              className="flex items-center justify-center rounded-xl border border-[#E8E6DF] px-5 py-3 text-sm font-semibold text-[#173B35] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#173B35] focus-visible:ring-offset-2"
             >
-              {t(language, "Clear filters", "ማጣሪያዎችን አጽዳ")}
+              {t(language, "Clear filters", "Ã¡Ë†â€ºÃ¡Å’Â£Ã¡Ë†ÂªÃ¡â€¹Â«Ã¡â€¹Å½Ã¡â€°Â½Ã¡Å â€¢ Ã¡Å Â Ã¡Å’Â½Ã¡â€¹Â³")}
             </Link>
           </form>
         </div>
@@ -196,13 +200,13 @@ export default async function SearchPage({
           <div>
             <h2 className="text-2xl font-extrabold text-[#172B3A]">
               {query
-                ? `${t(language, "Results for", "የፍለጋ ውጤቶች") } "${query}"`
-                : t(language, "Explore businesses", "ንግዶችን ያስሱ")}
+                ? `${t(language, "Results for", "Ã¡â€¹Â¨Ã¡ÂÂÃ¡Ë†Ë†Ã¡Å’â€¹ Ã¡â€¹ÂÃ¡Å’Â¤Ã¡â€°Â¶Ã¡â€°Â½") } "${query}"`
+                : t(language, "Explore businesses", "Ã¡Å â€¢Ã¡Å’ÂÃ¡â€¹Â¶Ã¡â€°Â½Ã¡Å â€¢ Ã¡â€¹Â«Ã¡Ë†ÂµÃ¡Ë†Â±")}
             </h2>
 
             <p className="mt-2 text-sm text-[#747C80]">
               {filteredBusinesses.length}{" "}
-              {t(language, "businesses found", "ንግዶች ተገኝተዋል")}
+              {t(language, "businesses found", "Ã¡Å â€¢Ã¡Å’ÂÃ¡â€¹Â¶Ã¡â€°Â½ Ã¡â€°Â°Ã¡Å’Ë†Ã¡Å ÂÃ¡â€°Â°Ã¡â€¹â€¹Ã¡Ë†Â")}
             </p>
           </div>
 
@@ -210,29 +214,29 @@ export default async function SearchPage({
             href="/"
             className="text-sm font-semibold text-[#173B35] hover:underline"
           >
-            {t(language, "Explore categories", "ምድቦችን ያስሱ")}
+            {t(language, "Explore categories", "Ã¡Ë†ÂÃ¡â€¹ÂµÃ¡â€°Â¦Ã¡â€°Â½Ã¡Å â€¢ Ã¡â€¹Â«Ã¡Ë†ÂµÃ¡Ë†Â±")}
           </Link>
         </div>
 
         {error ? (
           <div className="rounded-2xl border border-red-200 bg-white p-8 text-center text-red-700">
-            {t(language, "We could not load businesses. Please try again.", "ንግዶችን መጫን አልተቻለም። እባክዎ እንደገና ይሞክሩ።")}
+            {t(language, "We could not load businesses. Please try again.", "Ã¡Å â€¢Ã¡Å’ÂÃ¡â€¹Â¶Ã¡â€°Â½Ã¡Å â€¢ Ã¡Ë†ËœÃ¡Å’Â«Ã¡Å â€¢ Ã¡Å Â Ã¡Ë†ÂÃ¡â€°Â°Ã¡â€°Â»Ã¡Ë†Ë†Ã¡Ë†ÂÃ¡ÂÂ¢ Ã¡Å Â¥Ã¡â€°Â£Ã¡Å Â­Ã¡â€¹Å½ Ã¡Å Â¥Ã¡Å â€¢Ã¡â€¹Â°Ã¡Å’Ë†Ã¡Å â€œ Ã¡â€¹Â­Ã¡Ë†Å¾Ã¡Å Â­Ã¡Ë†Â©Ã¡ÂÂ¢")}
           </div>
         ) : filteredBusinesses.length === 0 ? (
           <div className="rounded-2xl border border-dashed border-[#D5A642] bg-white px-6 py-16 text-center">
             <h3 className="text-xl font-bold text-[#172B3A]">
-              {t(language, "No businesses found", "ምንም ንግድ አልተገኘም")}
+              {t(language, "No businesses found", "Ã¡Ë†ÂÃ¡Å â€¢Ã¡Ë†Â Ã¡Å â€¢Ã¡Å’ÂÃ¡â€¹Âµ Ã¡Å Â Ã¡Ë†ÂÃ¡â€°Â°Ã¡Å’Ë†Ã¡Å ËœÃ¡Ë†Â")}
             </h3>
 
             <p className="mx-auto mt-3 max-w-md text-sm leading-6 text-[#747C80]">
-              {t(language, "Try another business name, category, city, or neighborhood.", "ሌላ የንግድ ስም፣ ምድብ፣ ከተማ ወይም ሰፈር ይሞክሩ።")}
+              {t(language, "Try another business name, category, city, or neighborhood.", "Ã¡Ë†Å’Ã¡Ë†â€¹ Ã¡â€¹Â¨Ã¡Å â€¢Ã¡Å’ÂÃ¡â€¹Âµ Ã¡Ë†ÂµÃ¡Ë†ÂÃ¡ÂÂ£ Ã¡Ë†ÂÃ¡â€¹ÂµÃ¡â€°Â¥Ã¡ÂÂ£ Ã¡Å Â¨Ã¡â€°Â°Ã¡Ë†â€º Ã¡â€¹Ë†Ã¡â€¹Â­Ã¡Ë†Â Ã¡Ë†Â°Ã¡ÂË†Ã¡Ë†Â­ Ã¡â€¹Â­Ã¡Ë†Å¾Ã¡Å Â­Ã¡Ë†Â©Ã¡ÂÂ¢")}
             </p>
 
             <Link
               href="/search"
               className="mt-6 inline-block rounded-xl bg-[#173B35] px-6 py-3 text-sm font-bold text-white"
             >
-              {t(language, "Clear search", "ፍለጋውን አጽዳ")}
+              {t(language, "Clear search", "Ã¡ÂÂÃ¡Ë†Ë†Ã¡Å’â€¹Ã¡â€¹ÂÃ¡Å â€¢ Ã¡Å Â Ã¡Å’Â½Ã¡â€¹Â³")}
             </Link>
           </div>
         ) : (
@@ -261,7 +265,7 @@ export default async function SearchPage({
 
                   {business.verified && (
                     <span className="absolute right-3 top-3 rounded-full bg-white px-3 py-1 text-xs font-bold text-green-700 shadow">
-                      {t(language, "Verified", "የተረጋገጠ")}
+                      {t(language, "Verified", "Ã¡â€¹Â¨Ã¡â€°Â°Ã¡Ë†Â¨Ã¡Å’â€¹Ã¡Å’Ë†Ã¡Å’Â ")}
                     </span>
                   )}
                 </div>
@@ -281,12 +285,12 @@ export default async function SearchPage({
                     <span className="text-sm text-[#747C80]">
                       {business.city}
                       {business.neighborhood
-                        ? ` · ${business.neighborhood}`
+                        ? ` Ã‚Â· ${business.neighborhood}`
                         : ""}
                     </span>
 
                     <span className="whitespace-nowrap text-sm font-semibold text-[#B98526]">
-                      ★ {Number(business.average_rating).toFixed(1)} (
+                      Ã¢Ëœâ€¦ {Number(business.average_rating).toFixed(1)} (
                       {business.review_count})
                     </span>
                   </div>

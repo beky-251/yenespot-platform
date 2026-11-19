@@ -86,7 +86,7 @@ export default function ApplicationActions({ applicationId }: Props) {
             type="button"
             onClick={handleApprove}
             disabled={isPending}
-            className="rounded-xl bg-green px-5 py-3 text-sm font-bold text-white transition hover:bg-green/90 disabled:cursor-not-allowed disabled:opacity-60"
+            className="rounded-xl bg-green px-5 py-3 text-sm font-bold text-white transition hover:bg-green/90 disabled:cursor-not-allowed disabled:opacity-60 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green focus-visible:ring-offset-2"
           >
             {isPending ? "Processing..." : "Approve Application"}
           </button>
@@ -95,7 +95,7 @@ export default function ApplicationActions({ applicationId }: Props) {
             type="button"
             onClick={() => setShowRejectForm(true)}
             disabled={isPending}
-            className="rounded-xl border border-red-200 px-5 py-3 text-sm font-bold text-red-700 transition hover:bg-red-50 disabled:opacity-60"
+            className="rounded-xl border border-red-200 px-5 py-3 text-sm font-bold text-red-700 transition hover:bg-red-50 disabled:opacity-60 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red-700 focus-visible:ring-offset-2"
           >
             Reject Application
           </button>
@@ -117,7 +117,7 @@ export default function ApplicationActions({ applicationId }: Props) {
             rows={3}
             required
             placeholder="Explain why this application cannot be approved..."
-            className="mt-2 w-full rounded-xl border border-border bg-white px-4 py-3 text-sm text-navy outline-none focus:border-green focus:ring-2 focus:ring-green/10"
+            className="mt-2 w-full rounded-xl border border-border bg-white px-4 py-3 text-sm text-navy outline-none focus:border-green focus:ring-2 focus:ring-green/10 focus-visible:ring-2 focus-visible:ring-green focus-visible:ring-offset-2"
           />
 
           <p className="mt-1 text-right text-xs text-muted">
@@ -129,7 +129,7 @@ export default function ApplicationActions({ applicationId }: Props) {
               type="button"
               onClick={handleReject}
               disabled={isPending || !reason.trim()}
-              className="rounded-xl bg-red-700 px-5 py-3 text-sm font-bold text-white transition hover:bg-red-800 disabled:cursor-not-allowed disabled:opacity-60"
+              className="rounded-xl bg-red-700 px-5 py-3 text-sm font-bold text-white transition hover:bg-red-800 disabled:cursor-not-allowed disabled:opacity-60 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red-700 focus-visible:ring-offset-2"
             >
               {isPending ? "Processing..." : "Confirm Rejection"}
             </button>
@@ -142,7 +142,7 @@ export default function ApplicationActions({ applicationId }: Props) {
                 setResult(null);
               }}
               disabled={isPending}
-              className="rounded-xl border border-border bg-white px-5 py-3 text-sm font-bold text-navy"
+              className="rounded-xl border border-border bg-white px-5 py-3 text-sm font-bold text-navy focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green focus-visible:ring-offset-2"
             >
               Cancel
             </button>

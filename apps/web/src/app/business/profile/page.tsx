@@ -39,13 +39,13 @@ export default async function BusinessProfilePage() {
     <main className="min-h-screen bg-cream">
       <header className="border-b border-border bg-white">
         <div className="mx-auto flex max-w-5xl items-center justify-between px-5 py-5">
-          <Link href="/" className="text-2xl font-extrabold text-green">
+          <Link href="/" className="text-2xl font-extrabold text-green focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green focus-visible:ring-offset-2">
             Yene<span className="text-gold">Spot</span>
           </Link>
 
           <Link
             href="/business/dashboard"
-            className="rounded-xl border border-border px-4 py-2 text-sm font-semibold text-navy"
+            className="rounded-xl border border-border px-4 py-2 text-sm font-semibold text-navy focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green focus-visible:ring-offset-2"
           >
             {t(language, "Back to dashboard", "ወደ ዳሽቦርድ ተመለስ")}
           </Link>
@@ -72,7 +72,7 @@ export default async function BusinessProfilePage() {
         </section>
 
         {error ? (
-          <div className="mt-8 rounded-2xl border border-red-200 bg-white p-6 text-sm text-red-700">
+          <div role="alert" className="mt-8 rounded-2xl border border-red-200 bg-white p-6 text-sm text-red-700">
             {t(
               language,
               "We could not load your business profile. Please try again.",

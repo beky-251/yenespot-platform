@@ -90,7 +90,7 @@ export default function ResponseForm({
           maxLength={2000}
           required
           rows={3}
-          className="w-full rounded-lg border border-gray-300 bg-white p-3 text-sm text-[#292D32] outline-none focus:border-[#D5A642] focus:ring-2 focus:ring-[#D5A642]/20"
+          className="w-full rounded-lg border border-gray-300 bg-white p-3 text-sm text-[#292D32] outline-none focus:border-[#D5A642] focus:ring-2 focus:ring-[#D5A642]/20 focus-visible:ring-2 focus-visible:ring-offset-2"
         />
 
         <div className="mt-2 flex flex-wrap items-center justify-between gap-3">
@@ -104,7 +104,7 @@ export default function ResponseForm({
                 type="button"
                 onClick={handleDelete}
                 disabled={isPending}
-                className="rounded-lg border border-red-200 px-4 py-2 text-sm font-medium text-red-600 hover:bg-red-50 disabled:opacity-50"
+                className="rounded-lg border border-red-200 px-4 py-2 text-sm font-medium text-red-600 hover:bg-red-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red-600 focus-visible:ring-offset-2 disabled:opacity-50"
               >
                 Delete
               </button>
@@ -113,7 +113,7 @@ export default function ResponseForm({
             <button
               type="submit"
               disabled={isPending || !response.trim()}
-              className="rounded-lg bg-[#173B35] px-4 py-2 text-sm font-semibold text-white hover:bg-[#24564D] disabled:cursor-not-allowed disabled:opacity-50"
+              className="rounded-lg bg-[#173B35] px-4 py-2 text-sm font-semibold text-white hover:bg-[#24564D] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#173B35] focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
             >
               {isPending
                 ? "Saving..."

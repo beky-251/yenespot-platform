@@ -142,7 +142,7 @@ export function ServicesManager({
         <button
           type="button"
           onClick={startAdd}
-          className="rounded-lg bg-[#173B35] px-5 py-3 text-sm font-semibold text-white hover:bg-[#24564D]"
+          className="rounded-lg bg-[#173B35] px-5 py-3 text-sm font-semibold text-white hover:bg-[#24564D] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#173B35] focus-visible:ring-offset-2"
         >
           + Add service
         </button>
@@ -170,7 +170,7 @@ export function ServicesManager({
                 setForm({ ...form, name: event.target.value })
               }
               placeholder="e.g. Traditional Coffee Ceremony"
-              className="w-full rounded-lg border border-[#E8E6DF] px-4 py-3 text-sm outline-none focus:border-[#173B35]"
+              className="w-full rounded-lg border border-[#E8E6DF] px-4 py-3 text-sm outline-none focus:border-[#173B35] focus-visible:ring-2 focus-visible:ring-[#173B35] focus-visible:ring-offset-2"
             />
           </label>
 
@@ -186,7 +186,7 @@ export function ServicesManager({
                 setForm({ ...form, description: event.target.value })
               }
               placeholder="Describe this service..."
-              className="w-full rounded-lg border border-[#E8E6DF] px-4 py-3 text-sm outline-none focus:border-[#173B35]"
+              className="w-full rounded-lg border border-[#E8E6DF] px-4 py-3 text-sm outline-none focus:border-[#173B35] focus-visible:ring-2 focus-visible:ring-[#173B35] focus-visible:ring-offset-2"
             />
           </label>
 
@@ -203,7 +203,7 @@ export function ServicesManager({
                 setForm({ ...form, price: event.target.value })
               }
               placeholder="Leave blank if price varies"
-              className="w-full rounded-lg border border-[#E8E6DF] px-4 py-3 text-sm outline-none focus:border-[#173B35]"
+              className="w-full rounded-lg border border-[#E8E6DF] px-4 py-3 text-sm outline-none focus:border-[#173B35] focus-visible:ring-2 focus-visible:ring-[#173B35] focus-visible:ring-offset-2"
             />
           </label>
 
@@ -214,7 +214,7 @@ export function ServicesManager({
               onChange={(event) =>
                 setForm({ ...form, isAvailable: event.target.checked })
               }
-              className="h-4 w-4 accent-[#173B35]"
+              aria-label="Service is currently available" className="h-4 w-4 accent-[#173B35] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#173B35] focus-visible:ring-offset-2"
             />
             Service is currently available
           </label>
@@ -223,7 +223,7 @@ export function ServicesManager({
             <button
               type="submit"
               disabled={isPending}
-              className="rounded-lg bg-[#173B35] px-5 py-3 text-sm font-semibold text-white disabled:opacity-60"
+              className="rounded-lg bg-[#173B35] px-5 py-3 text-sm font-semibold text-white disabled:opacity-60 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#173B35] focus-visible:ring-offset-2"
             >
               {isPending
                 ? "Saving..."
@@ -240,7 +240,7 @@ export function ServicesManager({
                 setForm(emptyForm);
                 setMessage("");
               }}
-              className="rounded-lg border border-[#E8E6DF] px-5 py-3 text-sm font-semibold text-[#292D32]"
+              className="rounded-lg border border-[#E8E6DF] px-5 py-3 text-sm font-semibold text-[#292D32] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#173B35] focus-visible:ring-offset-2"
             >
               Cancel
             </button>
@@ -313,7 +313,7 @@ export function ServicesManager({
                   <button
                     type="button"
                     onClick={() => startEdit(service)}
-                    className="rounded-lg border border-[#E8E6DF] px-3 py-2 text-sm font-medium text-[#173B35] hover:bg-[#FAF9F6]"
+                    className="rounded-lg border border-[#E8E6DF] px-3 py-2 text-sm font-medium text-[#173B35] hover:bg-[#FAF9F6] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#173B35] focus-visible:ring-offset-2"
                   >
                     Edit
                   </button>
@@ -322,7 +322,7 @@ export function ServicesManager({
                     type="button"
                     onClick={() => handleDelete(service.id)}
                     disabled={isPending}
-                    className="rounded-lg border border-red-200 px-3 py-2 text-sm font-medium text-red-600 hover:bg-red-50 disabled:opacity-50"
+                    className="rounded-lg border border-red-200 px-3 py-2 text-sm font-medium text-red-600 hover:bg-red-50 disabled:opacity-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red-600 focus-visible:ring-offset-2"
                   >
                     Delete
                   </button>

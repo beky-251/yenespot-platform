@@ -128,7 +128,7 @@ export default function PhotoGallery({
             type="file"
             accept="image/jpeg,image/png,image/webp"
             required
-            className="block w-full text-sm text-muted file:mr-4 file:rounded-lg file:border-0 file:bg-green file:px-4 file:py-2 file:font-semibold file:text-white"
+            className="block w-full text-sm text-muted file:mr-4 file:rounded-lg file:border-0 file:bg-green file:px-4 file:py-2 file:font-semibold file:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green focus-visible:ring-offset-2"
           />
         </div>
 
@@ -146,14 +146,14 @@ export default function PhotoGallery({
             type="text"
             maxLength={300}
             placeholder="Describe your photo"
-            className="w-full rounded-xl border border-border px-4 py-3 text-sm outline-none focus:border-green"
+            className="w-full rounded-xl border border-border px-4 py-3 text-sm outline-none focus:border-green focus-visible:ring-2 focus-visible:ring-green focus-visible:ring-offset-2"
           />
         </div>
 
         <button
           type="submit"
           disabled={isPending}
-          className="rounded-xl bg-green px-6 py-3 text-sm font-semibold text-white transition hover:bg-green/90 disabled:cursor-not-allowed disabled:opacity-60"
+          className="rounded-xl bg-green px-6 py-3 text-sm font-semibold text-white transition hover:bg-green/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-60"
         >
           {isPending ? "Please wait..." : "Upload photo"}
         </button>
@@ -224,13 +224,13 @@ export default function PhotoGallery({
                       maxLength={300}
                       defaultValue={photo.caption || ""}
                       placeholder="Describe this photo"
-                      className="w-full rounded-lg border border-border px-3 py-2 text-sm outline-none focus:border-green"
+                      className="w-full rounded-lg border border-border px-3 py-2 text-sm outline-none focus:border-green focus-visible:ring-2 focus-visible:ring-green focus-visible:ring-offset-2"
                     />
 
                     <button
                       type="submit"
                       disabled={isPending}
-                      className="rounded-lg bg-green px-4 py-2 text-xs font-semibold text-white disabled:opacity-50"
+                      className="rounded-lg bg-green px-4 py-2 text-xs font-semibold text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green focus-visible:ring-offset-2 disabled:opacity-50"
                     >
                       Save caption
                     </button>
@@ -241,7 +241,7 @@ export default function PhotoGallery({
                       type="button"
                       onClick={() => handleSetCover(photo.id)}
                       disabled={isPending}
-                      className="mt-4 mr-2 rounded-lg bg-gold px-4 py-2 text-xs font-semibold text-white hover:opacity-90 disabled:opacity-50"
+                      className="mt-4 mr-2 rounded-lg bg-gold px-4 py-2 text-xs font-semibold text-white hover:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green focus-visible:ring-offset-2 disabled:opacity-50"
                     >
                       Set as cover
                     </button>
@@ -251,7 +251,7 @@ export default function PhotoGallery({
                     type="button"
                     onClick={() => handleDelete(photo.id)}
                     disabled={isPending}
-                    className="mt-4 rounded-lg border border-red-200 px-4 py-2 text-xs font-semibold text-red-600 hover:bg-red-50 disabled:opacity-50"
+                    className="mt-4 rounded-lg border border-red-200 px-4 py-2 text-xs font-semibold text-red-600 hover:bg-red-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green focus-visible:ring-offset-2 disabled:opacity-50"
                   >
                     Delete photo
                   </button>

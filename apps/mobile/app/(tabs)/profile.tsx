@@ -80,10 +80,8 @@ export default function ProfileScreen() {
     setError("");
 
     try {
-      const {
-        data: { user },
-        error: userError,
-      } = await supabase.auth.getUser();
+      const { data: { session }, error: userError } = await supabase.auth.getSession();
+      const user = session?.user;
 
       if (userError || !user) {
         setAccount(null);

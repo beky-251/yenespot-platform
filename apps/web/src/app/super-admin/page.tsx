@@ -62,12 +62,12 @@ export default async function SuperAdminDashboardPage() {
     <main className="min-h-screen bg-cream">
       <header className="border-b border-border bg-white">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-5">
-          <Link href="/" className="text-2xl font-extrabold text-green">
+          <Link href="/" className="text-2xl font-extrabold text-green focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green focus-visible:ring-offset-2">
             Yene<span className="text-gold">Spot</span>
             <span className="ml-2 text-xs font-semibold text-muted">SUPER ADMIN</span>
           </Link>
           <form action={logout}>
-            <button className="rounded-xl border border-border px-4 py-2 text-sm font-semibold text-navy">
+            <button className="rounded-xl border border-border px-4 py-2 text-sm font-semibold text-navy focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green focus-visible:ring-offset-2">
               Sign out
             </button>
           </form>
@@ -117,35 +117,35 @@ export default async function SuperAdminDashboardPage() {
                 <h3 className="font-bold text-navy">{title}</h3>
                 <p className="mt-2 text-sm leading-6 text-muted">{description}</p>
                 {title === "Admin Management" ? (
-                  <Link href="/super-admin/admins" className="mt-4 inline-block text-xs font-semibold text-green hover:underline">
+                  <Link href="/super-admin/admins" className="mt-4 inline-block text-xs font-semibold text-green hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green focus-visible:ring-offset-2">
                     Manage accounts &rarr;
                   </Link>
                 ) : title === "Business Management" ? (
-                  <Link href="/admin/businesses" className="mt-4 inline-block text-xs font-semibold text-green hover:underline">
+                  <Link href="/admin/businesses" className="mt-4 inline-block text-xs font-semibold text-green hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green focus-visible:ring-offset-2">
                     Manage businesses &rarr;
                   </Link>
                 ) : title === "User Management" ? (
-                  <Link href="/super-admin/users" className="mt-4 inline-block text-xs font-semibold text-green hover:underline">
+                  <Link href="/super-admin/users" className="mt-4 inline-block text-xs font-semibold text-green hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green focus-visible:ring-offset-2">
                     Manage users &rarr;
                   </Link>
                 ) : title === "Subscriptions & Payments" ? (
-                  <Link href="/super-admin/subscriptions" className="mt-4 inline-block text-xs font-semibold text-green hover:underline">
+                  <Link href="/super-admin/subscriptions" className="mt-4 inline-block text-xs font-semibold text-green hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green focus-visible:ring-offset-2">
                     Manage subscriptions &rarr;
                   </Link>
                 ) : title === "Platform Configuration" ? (
-                  <Link href="/super-admin/configuration" className="mt-4 inline-block text-xs font-semibold text-green hover:underline">
+                  <Link href="/super-admin/configuration" className="mt-4 inline-block text-xs font-semibold text-green hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green focus-visible:ring-offset-2">
                     Configure platform &rarr;
                   </Link>
                 ) : title === "Security & Roles" ? (
-                  <Link href="/super-admin/security" className="mt-4 inline-block text-xs font-semibold text-green hover:underline">
+                  <Link href="/super-admin/security" className="mt-4 inline-block text-xs font-semibold text-green hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green focus-visible:ring-offset-2">
                     Review security &rarr;
                   </Link>
                 ) : title === "Reports & Analytics" ? (
-                  <Link href="/super-admin/reports" className="mt-4 inline-block text-xs font-semibold text-green hover:underline">
+                  <Link href="/super-admin/reports" className="mt-4 inline-block text-xs font-semibold text-green hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green focus-visible:ring-offset-2">
                     View reports &rarr;
                   </Link>
                 ) : title === "Audit Logs" ? (
-                  <Link href="/super-admin/audit-logs" className="mt-4 inline-block text-xs font-semibold text-green hover:underline">
+                  <Link href="/super-admin/audit-logs" className="mt-4 inline-block text-xs font-semibold text-green hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green focus-visible:ring-offset-2">
                     Review audit logs &rarr;
                   </Link>
                 ) : (

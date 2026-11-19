@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+<rect width="1024" height="1024" rx="210" fill="#FF8A24"/>
+<g transform="translate(196 196) scale(1.23)">
+
+<path d="M256 40c-91 0-164 73-164 164 0 112 164 268 164 268s164-156 164-268C420 113 347 40 256 40z" fill="#FFFFFF"/>
+<circle cx="256" cy="198" r="78" fill="#FF8A24"/>
+<!-- orbit sweep -->
+<path d="M86 292c89 57 246 45 343-42 15-14 27-29 35-44-10 75-81 139-179 164-83 21-165 8-199-24-10-10-10-34 0-54z" fill="#FFFFFF"/>
+<path d="M91 298c88 48 220 44 316-15-76 69-224 91-312 38-18-11-20-17-4-23z" fill="#FFFFFF"/>
+<!-- small heritage-inspired diamond, deliberately abstract -->
+<path d="M256 382l39 39-39 39-39-39z" fill="#FF8A24"/>
+<path d="M256 397l24 24-24 24-24-24z" fill="#FFFFFF"/>
+</g></svg>

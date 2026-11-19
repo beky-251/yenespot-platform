@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { useState, useTransition } from "react";
 import { useRouter } from "next/navigation";
@@ -117,7 +117,8 @@ export default function BusinessList({ businesses }: Props) {
               key={item}
               type="button"
               onClick={() => setFilter(item)}
-              className={`rounded-xl px-4 py-2 text-sm font-semibold capitalize ${
+              aria-pressed={filter === item}
+              className={`rounded-xl px-4 py-2 text-sm font-semibold capitalize focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green focus-visible:ring-offset-2 ${
                 filter === item
                   ? "bg-green text-white"
                   : "border border-border bg-white text-navy"
@@ -130,7 +131,7 @@ export default function BusinessList({ businesses }: Props) {
       </div>
 
       {message && (
-        <div className="mt-5 rounded-xl border border-border bg-white p-4 text-sm text-navy">
+        <div role="status" className="mt-5 rounded-xl border border-border bg-white p-4 text-sm text-navy">
           {message}
         </div>
       )}
@@ -231,7 +232,7 @@ export default function BusinessList({ businesses }: Props) {
                     href={business.website}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="mt-4 inline-block text-sm font-semibold text-green hover:underline"
+                    className="mt-4 inline-block text-sm font-semibold text-green hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green focus-visible:ring-offset-2"
                   >
                     Visit website
                   </a>
@@ -244,7 +245,7 @@ export default function BusinessList({ businesses }: Props) {
                         type="button"
                         disabled={isPending}
                         onClick={() => changeStatus(business, "approved")}
-                        className="rounded-xl bg-green px-4 py-2 text-sm font-semibold text-white disabled:opacity-50"
+                        className="rounded-xl bg-green px-4 py-2 text-sm font-semibold text-white disabled:opacity-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green focus-visible:ring-offset-2"
                       >
                         Approve
                       </button>
@@ -253,7 +254,7 @@ export default function BusinessList({ businesses }: Props) {
                         type="button"
                         disabled={isPending}
                         onClick={() => changeStatus(business, "rejected")}
-                        className="rounded-xl border border-red-200 px-4 py-2 text-sm font-semibold text-red-700 disabled:opacity-50"
+                        className="rounded-xl border border-red-200 px-4 py-2 text-sm font-semibold text-red-700 disabled:opacity-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red-700 focus-visible:ring-offset-2"
                       >
                         Reject
                       </button>
@@ -266,7 +267,7 @@ export default function BusinessList({ businesses }: Props) {
                         type="button"
                         disabled={isPending}
                         onClick={() => changeStatus(business, "suspended")}
-                        className="rounded-xl border border-border px-4 py-2 text-sm font-semibold text-navy disabled:opacity-50"
+                        className="rounded-xl border border-border px-4 py-2 text-sm font-semibold text-navy disabled:opacity-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green focus-visible:ring-offset-2"
                       >
                         Suspend
                       </button>
@@ -275,7 +276,7 @@ export default function BusinessList({ businesses }: Props) {
                         type="button"
                         disabled={isPending}
                         onClick={() => changeVerification(business)}
-                        className="rounded-xl bg-gold/10 px-4 py-2 text-sm font-semibold text-navy disabled:opacity-50"
+                        className="rounded-xl bg-gold/10 px-4 py-2 text-sm font-semibold text-navy disabled:opacity-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green focus-visible:ring-offset-2"
                       >
                         {business.verified
                           ? "Remove verification"
@@ -286,7 +287,7 @@ export default function BusinessList({ businesses }: Props) {
                         href={`/business/${business.slug}`}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="rounded-xl border border-border px-4 py-2 text-sm font-semibold text-green"
+                        className="rounded-xl border border-border px-4 py-2 text-sm font-semibold text-green focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green focus-visible:ring-offset-2"
                       >
                         View public listing
                       </a>
@@ -298,7 +299,7 @@ export default function BusinessList({ businesses }: Props) {
                       type="button"
                       disabled={isPending}
                       onClick={() => changeStatus(business, "approved")}
-                      className="rounded-xl bg-green px-4 py-2 text-sm font-semibold text-white disabled:opacity-50"
+                      className="rounded-xl bg-green px-4 py-2 text-sm font-semibold text-white disabled:opacity-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green focus-visible:ring-offset-2"
                     >
                       Reactivate
                     </button>
@@ -309,7 +310,7 @@ export default function BusinessList({ businesses }: Props) {
                       type="button"
                       disabled={isPending}
                       onClick={() => changeStatus(business, "pending")}
-                      className="rounded-xl border border-border px-4 py-2 text-sm font-semibold text-navy disabled:opacity-50"
+                      className="rounded-xl border border-border px-4 py-2 text-sm font-semibold text-navy disabled:opacity-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green focus-visible:ring-offset-2"
                     >
                       Return to pending
                     </button>

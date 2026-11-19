@@ -54,37 +54,37 @@ export default async function CustomerNotificationsPage() {
       <div className="mx-auto max-w-4xl px-5 py-10">
         <Link
           href="/profile"
-          className="text-sm font-semibold text-green hover:underline"
+          className="text-sm font-semibold text-green hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green focus-visible:ring-offset-2"
         >
-          {t(language, "← Back to profile", "← ወደ መገለጫ ተመለስ")}
+          {t(language, "â† Back to profile", "â† á‹ˆá‹° áˆ˜áŒˆáˆˆáŒ« á‰°áˆ˜áˆˆáˆµ")}
         </Link>
 
         <div className="mt-8 flex flex-wrap items-center justify-between gap-4">
           <div>
             <h1 className="text-3xl font-bold text-navy">
-              {t(language, "My Notifications", "ማሳወቂያዎቼ")}
+              {t(language, "My Notifications", "áˆ›áˆ³á‹ˆá‰‚á‹«á‹Žá‰¼")}
             </h1>
             <p className="mt-2 text-sm text-muted">
-              {t(language, "See when businesses reply to your reviews.", "ንግዶች ለግምገማዎችዎ ምላሽ ሲሰጡ ይመልከቱ።")}
+              {t(language, "See when businesses reply to your reviews.", "áŠ•áŒá‹¶á‰½ áˆˆáŒáˆáŒˆáˆ›á‹Žá‰½á‹Ž áˆáˆ‹áˆ½ áˆ²áˆ°áŒ¡ á‹­áˆ˜áˆáŠ¨á‰±á¢")}
             </p>
           </div>
 
           <span className="rounded-full bg-green/10 px-4 py-2 text-sm font-semibold text-green">
-            {unreadCount} {t(language, "unread", "ያልተነበቡ")}
+            {unreadCount} {t(language, "unread", "á‹«áˆá‰°áŠá‰ á‰¡")}
           </span>
         </div>
 
         {error ? (
-          <div className="mt-8 rounded-2xl border border-red-200 bg-white p-6 text-sm text-red-700">
-            {t(language, "We could not load your notifications. Please refresh and try again.", "ማሳወቂያዎችዎን መጫን አልተቻለም። እባክዎ ገጹን አድስተው እንደገና ይሞክሩ።")}
+          <div role="alert" className="mt-8 rounded-2xl border border-red-200 bg-white p-6 text-sm text-red-700">
+            {t(language, "We could not load your notifications. Please refresh and try again.", "áˆ›áˆ³á‹ˆá‰‚á‹«á‹Žá‰½á‹ŽáŠ• áˆ˜áŒ«áŠ• áŠ áˆá‰°á‰»áˆˆáˆá¢ áŠ¥á‰£áŠ­á‹Ž áŒˆáŒ¹áŠ• áŠ á‹µáˆµá‰°á‹ áŠ¥áŠ•á‹°áŒˆáŠ“ á‹­áˆžáŠ­áˆ©á¢")}
           </div>
         ) : notificationList.length === 0 ? (
           <div className="mt-8 rounded-2xl border border-border bg-white p-10 text-center">
             <h2 className="text-lg font-bold text-navy">
-              {t(language, "You are all caught up!", "ሁሉንም ማሳወቂያዎች አንብበዋል!")}
+              {t(language, "You are all caught up!", "áˆáˆ‰áŠ•áˆ áˆ›áˆ³á‹ˆá‰‚á‹«á‹Žá‰½ áŠ áŠ•á‰¥á‰ á‹‹áˆ!")}
             </h2>
             <p className="mt-2 text-sm text-muted">
-              {t(language, "When a business replies to one of your reviews, the notification will appear here.", "አንድ ንግድ ለግምገማዎ ምላሽ ሲሰጥ፣ ማሳወቂያው እዚህ ይታያል።")}
+              {t(language, "When a business replies to one of your reviews, the notification will appear here.", "áŠ áŠ•á‹µ áŠ•áŒá‹µ áˆˆáŒáˆáŒˆáˆ›á‹Ž áˆáˆ‹áˆ½ áˆ²áˆ°áŒ¥á£ áˆ›áˆ³á‹ˆá‰‚á‹«á‹ áŠ¥á‹šáˆ… á‹­á‰³á‹«áˆá¢")}
             </p>
           </div>
         ) : (
@@ -113,7 +113,7 @@ export default async function CustomerNotificationsPage() {
 
                     {!notification.is_read && (
                       <span className="shrink-0 rounded-full bg-green/10 px-3 py-1 text-xs font-bold text-green">
-                        {t(language, "New", "አዲስ")}
+                        {t(language, "New", "áŠ á‹²áˆµ")}
                       </span>
                     )}
                   </div>
@@ -146,9 +146,9 @@ export default async function CustomerNotificationsPage() {
                           />
                           <button
                             type="submit"
-                            className="text-sm font-semibold text-green hover:underline"
+                            className="text-sm font-semibold text-green hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green focus-visible:ring-offset-2"
                           >
-                            {t(language, "Mark as read", "እንደተነበበ ምልክት አድርግ")}
+                            {t(language, "Mark as read", "áŠ¥áŠ•á‹°á‰°áŠá‰ á‰  áˆáˆáŠ­á‰µ áŠ á‹µáˆ­áŒ")}
                           </button>
                         </form>
                       )}
@@ -156,9 +156,9 @@ export default async function CustomerNotificationsPage() {
                       {business && (
                         <Link
                           href={`/business/${business.slug}`}
-                          className="text-sm font-semibold text-green hover:underline"
+                          className="text-sm font-semibold text-green hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green focus-visible:ring-offset-2"
                         >
-                          {t(language, "View business", "ንግዱን ይመልከቱ")}
+                          {t(language, "View business", "áŠ•áŒá‹±áŠ• á‹­áˆ˜áˆáŠ¨á‰±")}
                         </Link>
                       )}
                     </div>

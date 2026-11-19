@@ -86,11 +86,11 @@ export default function ReviewForm({
 
       <form onSubmit={handleSubmit} className="mt-5 space-y-4">
         <div>
-          <label className="mb-2 block text-sm font-medium text-gray-700">
+          <label id="review-rating-label" className="mb-2 block text-sm font-medium text-gray-700">
             Your rating
           </label>
 
-          <div className="flex gap-2" role="group" aria-label="Select a rating">
+          <div className="flex gap-2" role="group" aria-labelledby="review-rating-label">
             {[1, 2, 3, 4, 5].map((star) => (
               <button
                 key={star}
@@ -99,11 +99,11 @@ export default function ReviewForm({
                 disabled={isPending}
                 aria-label={`${star} star${star === 1 ? "" : "s"}`}
                 aria-pressed={rating === star}
-                className={`text-3xl transition ${
+                className={`text-3xl transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#173B35] focus-visible:ring-offset-2 ${
                   star <= rating ? "text-[#D5A642]" : "text-gray-300"
                 }`}
               >
-                ★
+                â˜…
               </button>
             ))}
           </div>
@@ -129,7 +129,7 @@ export default function ReviewForm({
             rows={4}
             placeholder="What did you like about this business?"
             disabled={isPending}
-            className="w-full rounded-xl border border-gray-300 px-4 py-3 text-sm text-gray-800 outline-none transition focus:border-[#D5A642] focus:ring-2 focus:ring-[#D5A642]/20"
+            className="w-full rounded-xl border border-gray-300 px-4 py-3 text-sm text-gray-800 outline-none transition focus:border-[#D5A642] focus:ring-2 focus:ring-[#D5A642]/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#173B35] focus-visible:ring-offset-2"
           />
 
           <p className="mt-1 text-right text-xs text-gray-400">
@@ -141,7 +141,7 @@ export default function ReviewForm({
           <button
             type="submit"
             disabled={isPending}
-            className="rounded-xl bg-[#173B35] px-5 py-3 text-sm font-semibold text-white transition hover:bg-[#24554b] disabled:cursor-not-allowed disabled:opacity-60"
+            className="rounded-xl bg-[#173B35] px-5 py-3 text-sm font-semibold text-white transition hover:bg-[#24554b] disabled:cursor-not-allowed disabled:opacity-60 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#173B35] focus-visible:ring-offset-2"
           >
             {isPending
               ? "Saving..."
@@ -155,7 +155,7 @@ export default function ReviewForm({
               type="button"
               onClick={handleDelete}
               disabled={isPending}
-              className="rounded-xl border border-red-200 px-5 py-3 text-sm font-semibold text-red-600 transition hover:bg-red-50 disabled:opacity-60"
+              className="rounded-xl border border-red-200 px-5 py-3 text-sm font-semibold text-red-600 transition hover:bg-red-50 disabled:opacity-60 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red-600 focus-visible:ring-offset-2"
             >
               Delete review
             </button>

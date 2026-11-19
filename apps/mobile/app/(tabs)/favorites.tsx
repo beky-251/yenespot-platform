@@ -84,11 +84,13 @@ export default function FavoritesScreen() {
       setError(null);
 
       const {
-        data: { user },
+        data: { session },
         error: authError,
-      } = await supabase.auth.getUser();
+      } = await supabase.auth.getSession();
 
       if (authError) throw authError;
+
+      const user = session?.user;
 
       if (!user) {
         setFavorites([]);
@@ -199,11 +201,13 @@ export default function FavoritesScreen() {
       setRemovingId(businessId);
 
       const {
-        data: { user },
+        data: { session },
         error: authError,
-      } = await supabase.auth.getUser();
+      } = await supabase.auth.getSession();
 
       if (authError) throw authError;
+
+      const user = session?.user;
 
       if (!user) {
         Alert.alert(t("Sign in required", "\u1218\u130d\u1263\u1275 \u12eb\u1235\u1348\u120d\u130b\u120d"), t("Please sign in first.", "\u12a5\u1263\u12ad\u12ce \u1218\u1300\u1218\u122a\u12eb \u12ed\u130d\u1261\u1362"));

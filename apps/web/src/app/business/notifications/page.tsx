@@ -50,7 +50,7 @@ export default async function BusinessNotificationsPage() {
       <div className="mx-auto max-w-4xl px-5 py-10">
         <Link
           href="/business/dashboard"
-          className="text-sm font-semibold text-green hover:underline"
+          className="text-sm font-semibold text-green hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green focus-visible:ring-offset-2"
         >
           {t(language, "← Back to dashboard", "← ወደ ዳሽቦርድ ተመለስ")}
         </Link>
@@ -75,7 +75,7 @@ export default async function BusinessNotificationsPage() {
         </div>
 
         {error ? (
-          <div className="mt-8 rounded-2xl border border-red-200 bg-white p-6 text-sm text-red-700">
+          <div role="alert" className="mt-8 rounded-2xl border border-red-200 bg-white p-6 text-sm text-red-700">
             {t(
               language,
               "We could not load your notifications. Please refresh and try again.",
@@ -154,7 +154,7 @@ export default async function BusinessNotificationsPage() {
                           />
                           <button
                             type="submit"
-                            className="text-sm font-semibold text-green hover:underline"
+                            className="text-sm font-semibold text-green hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green focus-visible:ring-offset-2"
                           >
                             {t(language, "Mark as read", "እንደተነበበ ምልክት አድርግ")}
                           </button>
@@ -163,7 +163,7 @@ export default async function BusinessNotificationsPage() {
                       {business && (
                         <Link
                           href={`/business/${business.slug}`}
-                          className="text-sm font-semibold text-green hover:underline"
+                          className="text-sm font-semibold text-green hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green focus-visible:ring-offset-2"
                         >
                           {t(language, "View business", "ንግዱን ይመልከቱ")}
                         </Link>

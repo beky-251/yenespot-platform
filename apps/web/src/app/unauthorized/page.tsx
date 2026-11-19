@@ -24,21 +24,21 @@ export default function UnauthorizedPage() {
         <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
           <Link
             href="/"
-            className="rounded-xl bg-green px-6 py-3 text-sm font-semibold text-white transition hover:bg-navy"
+            className="rounded-xl bg-green px-6 py-3 text-sm font-semibold text-white transition hover:bg-navy focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green focus-visible:ring-offset-2"
           >
             Back to Homepage
           </Link>
 
           <Link
             href="/login"
-            className="rounded-xl border border-border px-6 py-3 text-sm font-semibold text-navy transition hover:bg-cream"
+            className="rounded-xl border border-border px-6 py-3 text-sm font-semibold text-navy transition hover:bg-cream focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green focus-visible:ring-offset-2"
           >
             Sign In
           </Link>
         </div>
 
         <p className="mt-8 text-xs text-muted">
-          ©YeneSpot
+          Â©YeneSpot
         </p>
       </section>
     </main>

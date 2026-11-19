@@ -102,7 +102,7 @@ export default function AdministratorList({ accounts }: Props) {
         value={search}
         onChange={(event) => setSearch(event.target.value)}
         placeholder="Enter a name or phone number..."
-        className="w-full rounded-xl border border-border bg-white px-4 py-3 text-sm text-navy outline-none focus:border-green sm:max-w-xl"
+        className="w-full rounded-xl border border-border bg-white px-4 py-3 text-sm text-navy outline-none focus:border-green focus-visible:ring-2 focus-visible:ring-green focus-visible:ring-offset-2 sm:max-w-xl"
       />
 
       <div className="mt-5 flex flex-wrap gap-2">
@@ -117,7 +117,8 @@ export default function AdministratorList({ accounts }: Props) {
               key={item}
               type="button"
               onClick={() => setFilter(item)}
-              className={`rounded-xl px-4 py-2 text-sm font-semibold ${
+              aria-pressed={filter === item}
+              className={`rounded-xl px-4 py-2 text-sm font-semibold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green focus-visible:ring-offset-2 ${
                 filter === item
                   ? "bg-green text-white"
                   : "border border-border bg-white text-navy"
@@ -198,7 +199,7 @@ export default function AdministratorList({ accounts }: Props) {
                       type="button"
                       disabled={isPending}
                       onClick={() => changeRole(account, "admin")}
-                      className="rounded-xl bg-green px-4 py-2 text-sm font-semibold text-white disabled:opacity-50"
+                      className="rounded-xl bg-green px-4 py-2 text-sm font-semibold text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green focus-visible:ring-offset-2 disabled:opacity-50"
                     >
                       Promote to administrator
                     </button>
@@ -207,7 +208,7 @@ export default function AdministratorList({ accounts }: Props) {
                       type="button"
                       disabled={isPending}
                       onClick={() => changeRole(account, "customer")}
-                      className="rounded-xl border border-red-200 px-4 py-2 text-sm font-semibold text-red-700 disabled:opacity-50"
+                      className="rounded-xl border border-red-200 px-4 py-2 text-sm font-semibold text-red-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red-600 focus-visible:ring-offset-2 disabled:opacity-50"
                     >
                       Remove administrator access
                     </button>

@@ -21,13 +21,13 @@ const DAYS = [
 ];
 
 const DAYS_AM = [
-  "እሁድ",
-  "ሰኞ",
-  "ማክሰኞ",
-  "ረቡዕ",
-  "ሐሙስ",
-  "ዓርብ",
-  "ቅዳሜ",
+  "áŠ¥áˆá‹µ",
+  "áˆ°áŠž",
+  "áˆ›áŠ­áˆ°áŠž",
+  "áˆ¨á‰¡á‹•",
+  "áˆáˆ™áˆµ",
+  "á‹“áˆ­á‰¥",
+  "á‰…á‹³áˆœ",
 ];
 
 function formatTime(time: string | null) {
@@ -186,7 +186,7 @@ export default async function PublicBusinessPage({
             href="/"
             className="text-sm font-semibold text-[#173B35] hover:underline"
           >
-            {t(language, "Explore businesses →", "ንግዶችን ያስሱ →")}
+            {t(language, "Explore businesses â†’", "áŠ•áŒá‹¶á‰½áŠ• á‹«áˆµáˆ± â†’")}
           </Link>
         </div>
       </header>
@@ -195,7 +195,7 @@ export default async function PublicBusinessPage({
         <div className="mb-6">
           <p className="text-sm text-[#747C80]">
             {business.city}
-            {business.neighborhood ? ` · ${business.neighborhood}` : ""}
+            {business.neighborhood ? ` Â· ${business.neighborhood}` : ""}
           </p>
 
           <h1 className="mt-2 text-3xl font-extrabold text-[#172B3A] md:text-4xl">
@@ -213,14 +213,14 @@ export default async function PublicBusinessPage({
 
             {business.verified && (
               <span className="rounded-full bg-green-50 px-3 py-1 text-sm font-semibold text-green-700">
-                ✓ {t(language, "Verified business", "የተረጋገጠ ንግድ")}
+                âœ“ {t(language, "Verified business", "á‹¨á‰°áˆ¨áŒ‹áŒˆáŒ  áŠ•áŒá‹µ")}
               </span>
             )}
 
             <span className="text-sm text-[#747C80]">
-              ★ {business.average_rating.toFixed(1)} (
+              â˜… {business.average_rating.toFixed(1)} (
               {business.review_count}{" "}
-              {t(language, "reviews", "ግምገማዎች")})
+              {t(language, "reviews", "áŒáˆáŒˆáˆ›á‹Žá‰½")})
             </span>
           </div>
 
@@ -236,9 +236,9 @@ export default async function PublicBusinessPage({
                 >
                   <button
                     type="submit"
-                    className="rounded-xl border border-[#173B35] px-5 py-3 text-sm font-bold text-[#173B35] transition hover:bg-[#F3EBD8]"
+                    className="rounded-xl border border-[#173B35] px-5 py-3 text-sm font-bold text-[#173B35] transition hover:bg-[#F3EBD8] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#173B35] focus-visible:ring-offset-2"
                   >
-                    ♥ {t(language, "Remove from Favorites", "ከተወዳጆች ውስጥ አስወግድ")}
+                    â™¥ {t(language, "Remove from Favorites", "áŠ¨á‰°á‹ˆá‹³áŒ†á‰½ á‹áˆµáŒ¥ áŠ áˆµá‹ˆáŒá‹µ")}
                   </button>
                 </form>
               ) : (
@@ -250,9 +250,9 @@ export default async function PublicBusinessPage({
                 >
                   <button
                     type="submit"
-                    className="rounded-xl bg-[#173B35] px-5 py-3 text-sm font-bold text-white transition hover:bg-[#172B3A]"
+                    className="rounded-xl bg-[#173B35] px-5 py-3 text-sm font-bold text-white transition hover:bg-[#172B3A] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#173B35] focus-visible:ring-offset-2"
                   >
-                    ♡ {t(language, "Save to Favorites", "ወደ ተወዳጆች አክል")}
+                    â™¡ {t(language, "Save to Favorites", "á‹ˆá‹° á‰°á‹ˆá‹³áŒ†á‰½ áŠ áŠ­áˆ")}
                   </button>
                 </form>
               )
@@ -261,9 +261,9 @@ export default async function PublicBusinessPage({
                 href={`/login?next=${encodeURIComponent(
                   `/business/${business.slug}`,
                 )}`}
-                className="inline-block rounded-xl border border-[#173B35] px-5 py-3 text-sm font-bold text-[#173B35] transition hover:bg-[#F3EBD8]"
+                className="inline-block rounded-xl border border-[#173B35] px-5 py-3 text-sm font-bold text-[#173B35] transition hover:bg-[#F3EBD8] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#173B35] focus-visible:ring-offset-2"
               >
-                {t(language, "Sign in to Save Favorites", "ተወዳጆች ውስጥ ለማስቀመጥ ይግቡ")}
+                {t(language, "Sign in to Save Favorites", "á‰°á‹ˆá‹³áŒ†á‰½ á‹áˆµáŒ¥ áˆˆáˆ›áˆµá‰€áˆ˜áŒ¥ á‹­áŒá‰¡")}
               </Link>
             ) : null}
           </div>
@@ -291,7 +291,7 @@ export default async function PublicBusinessPage({
           </section>
         ) : (
           <div className="flex h-64 items-center justify-center rounded-2xl bg-[#E8E6DF] text-[#747C80]">
-            {t(language, "Business photos coming soon", "የንግዱ ፎቶዎች በቅርቡ ይጨመራሉ")}
+            {t(language, "Business photos coming soon", "á‹¨áŠ•áŒá‹± áŽá‰¶á‹Žá‰½ á‰ á‰…áˆ­á‰¡ á‹­áŒ¨áˆ˜áˆ«áˆ‰")}
           </div>
         )}
 
@@ -299,18 +299,18 @@ export default async function PublicBusinessPage({
           <div className="space-y-10 lg:col-span-2">
             <section>
               <h2 className="text-xl font-bold text-[#172B3A]">
-                {t(language, "About this business", "ስለዚህ ንግድ")}
+                {t(language, "About this business", "áˆµáˆˆá‹šáˆ… áŠ•áŒá‹µ")}
               </h2>
 
               <p className="mt-3 whitespace-pre-line leading-7 text-[#747C80]">
                 {business.description ||
-                  t(language, "Business description coming soon.", "የንግዱ መግለጫ በቅርቡ ይጨመራል።")}
+                  t(language, "Business description coming soon.", "á‹¨áŠ•áŒá‹± áˆ˜áŒáˆˆáŒ« á‰ á‰…áˆ­á‰¡ á‹­áŒ¨áˆ˜áˆ«áˆá¢")}
               </p>
             </section>
 
             <section>
               <h2 className="text-xl font-bold text-[#172B3A]">
-                {t(language, "Services & Products", "አገልግሎቶች እና ምርቶች")}
+                {t(language, "Services & Products", "áŠ áŒˆáˆáŒáˆŽá‰¶á‰½ áŠ¥áŠ“ áˆáˆ­á‰¶á‰½")}
               </h2>
 
               {services && services.length > 0 ? (
@@ -332,7 +332,7 @@ export default async function PublicBusinessPage({
 
                       <p className="mt-3 font-semibold text-[#173B35]">
                         {service.price === null
-                          ? t(language, "Price on request", "ዋጋውን ይጠይቁ")
+                          ? t(language, "Price on request", "á‹‹áŒ‹á‹áŠ• á‹­áŒ á‹­á‰")
                           : `${service.price.toLocaleString(
                               language === "am" ? "am-ET" : "en-ET",
                               {
@@ -346,14 +346,14 @@ export default async function PublicBusinessPage({
                 </div>
               ) : (
                 <p className="mt-3 text-sm text-[#747C80]">
-                  {t(language, "No services currently listed.", "በአሁኑ ጊዜ ምንም አገልግሎቶች አልተዘረዘሩም።")}
+                  {t(language, "No services currently listed.", "á‰ áŠ áˆáŠ‘ áŒŠá‹œ áˆáŠ•áˆ áŠ áŒˆáˆáŒáˆŽá‰¶á‰½ áŠ áˆá‰°á‹˜áˆ¨á‹˜áˆ©áˆá¢")}
                 </p>
               )}
             </section>
 
             <section>
               <h2 className="text-xl font-bold text-[#172B3A]">
-                {t(language, "Opening Hours", "የስራ ሰዓታት")}
+                {t(language, "Opening Hours", "á‹¨áˆµáˆ« áˆ°á‹“á‰³á‰µ")}
               </h2>
 
               <div className="mt-4 overflow-hidden rounded-xl border border-[#E8E6DF] bg-white">
@@ -373,10 +373,10 @@ export default async function PublicBusinessPage({
 
                       <span className="text-sm text-[#747C80]">
                         {!schedule
-                          ? t(language, "Hours not provided", "የስራ ሰዓት አልተገለጸም")
+                          ? t(language, "Hours not provided", "á‹¨áˆµáˆ« áˆ°á‹“á‰µ áŠ áˆá‰°áŒˆáˆˆáŒ¸áˆ")
                           : schedule.is_closed
-                            ? t(language, "Closed", "ዝግ ነው")
-                            : `${formatTime(schedule.opens_at)} – ${formatTime(schedule.closes_at)}`}
+                            ? t(language, "Closed", "á‹áŒ áŠá‹")
+                            : `${formatTime(schedule.opens_at)} â€“ ${formatTime(schedule.closes_at)}`}
                       </span>
                     </div>
                   );
@@ -393,13 +393,13 @@ export default async function PublicBusinessPage({
 
           <aside className="h-fit rounded-2xl border border-[#E8E6DF] bg-white p-6">
             <h2 className="text-xl font-bold text-[#172B3A]">
-              {t(language, "Contact & Location", "አድራሻ እና አካባቢ")}
+              {t(language, "Contact & Location", "áŠ á‹µáˆ«áˆ» áŠ¥áŠ“ áŠ áŠ«á‰£á‰¢")}
             </h2>
 
             {business.address && (
               <div className="mt-5">
                 <p className="text-xs font-semibold uppercase text-[#747C80]">
-                  {t(language, "Address", "አድራሻ")}
+                  {t(language, "Address", "áŠ á‹µáˆ«áˆ»")}
                 </p>
                 <p className="mt-1 text-sm text-[#292D32]">
                   {business.address}
@@ -410,11 +410,11 @@ export default async function PublicBusinessPage({
             {business.phone && (
               <div className="mt-5">
                 <p className="text-xs font-semibold uppercase text-[#747C80]">
-                  {t(language, "Phone", "ስልክ")}
+                  {t(language, "Phone", "áˆµáˆáŠ­")}
                 </p>
                 <a
                   href={`tel:${business.phone}`}
-                  className="mt-1 block text-sm font-semibold text-[#173B35]"
+                  className="mt-1 block text-sm font-semibold text-[#173B35] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#173B35] focus-visible:ring-offset-2"
                 >
                   {business.phone}
                 </a>
@@ -424,11 +424,11 @@ export default async function PublicBusinessPage({
             {business.email && (
               <div className="mt-5">
                 <p className="text-xs font-semibold uppercase text-[#747C80]">
-                  {t(language, "Email", "ኢሜይል")}
+                  {t(language, "Email", "áŠ¢áˆœá‹­áˆ")}
                 </p>
                 <a
                   href={`mailto:${business.email}`}
-                  className="mt-1 block break-all text-sm font-semibold text-[#173B35]"
+                  className="mt-1 block break-all text-sm font-semibold text-[#173B35] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#173B35] focus-visible:ring-offset-2"
                 >
                   {business.email}
                 </a>
@@ -438,15 +438,15 @@ export default async function PublicBusinessPage({
             {business.website && (
               <div className="mt-5">
                 <p className="text-xs font-semibold uppercase text-[#747C80]">
-                  {t(language, "Website", "ድረ-ገጽ")}
+                  {t(language, "Website", "á‹µáˆ¨-áŒˆáŒ½")}
                 </p>
                 <a
                   href={business.website}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="mt-1 block break-all text-sm font-semibold text-[#173B35]"
+                  className="mt-1 block break-all text-sm font-semibold text-[#173B35] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#173B35] focus-visible:ring-offset-2"
                 >
-                  {t(language, "Visit website →", "ድረ-ገጹን ይጎብኙ →")}
+                  {t(language, "Visit website â†’", "á‹µáˆ¨-áŒˆáŒ¹áŠ• á‹­áŒŽá‰¥áŠ™ â†’")}
                 </a>
               </div>
             )}
@@ -454,7 +454,7 @@ export default async function PublicBusinessPage({
             <div className="mt-5 border-t border-[#E8E6DF] pt-5">
               <p className="text-sm text-[#747C80]">
                 {business.city}
-                {business.neighborhood ? ` · ${business.neighborhood}` : ""}
+                {business.neighborhood ? ` Â· ${business.neighborhood}` : ""}
               </p>
             </div>
           </aside>

@@ -74,11 +74,8 @@ export default function MyReviewsScreen() {
     setError("");
 
     try {
-      const {
-        data: { user },
-        error: authError,
-      } = await supabase.auth.getUser();
-
+      const { data: { session }, error: authError } = await supabase.auth.getSession();
+      const user = session?.user;
       if (authError) throw authError;
 
       if (!user) {

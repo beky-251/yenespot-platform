@@ -72,13 +72,13 @@ export default async function ReviewSection({
 
         <div className="mt-3 flex flex-wrap items-center gap-3">
           <span className="text-3xl font-extrabold text-[#172B3A]">
-            {reviewList.length > 0 ? averageRating.toFixed(1) : "—"}
+            {reviewList.length > 0 ? averageRating.toFixed(1) : "â€”"}
           </span>
 
           <div>
             <div className="text-lg tracking-wide text-[#D5A642]">
-              {"★".repeat(Math.round(averageRating))}
-              {"☆".repeat(5 - Math.round(averageRating))}
+              {"â˜…".repeat(Math.round(averageRating))}
+              {"â˜†".repeat(5 - Math.round(averageRating))}
             </div>
 
             <p className="text-sm text-[#747C80]">
@@ -117,7 +117,7 @@ export default async function ReviewSection({
 
           <Link
             href={`/login?next=${encodeURIComponent(`/business/${slug}`)}`}
-            className="mt-3 inline-block rounded-xl bg-[#173B35] px-5 py-3 text-sm font-semibold text-white hover:bg-[#24554b]"
+            className="mt-3 inline-block rounded-xl bg-[#173B35] px-5 py-3 text-sm font-semibold text-white hover:bg-[#24554b] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#173B35] focus-visible:ring-offset-2"
           >
             Sign in to write a review
           </Link>
@@ -154,7 +154,7 @@ export default async function ReviewSection({
                         month: "long",
                         day: "numeric",
                       })}
-                      {review.updated_at !== review.created_at && " · Edited"}
+                      {review.updated_at !== review.created_at && " Â· Edited"}
                     </p>
                   </div>
 
@@ -162,8 +162,8 @@ export default async function ReviewSection({
                     className="text-lg tracking-wide text-[#D5A642]"
                     aria-label={`${review.rating} out of 5 stars`}
                   >
-                    {"★".repeat(review.rating)}
-                    {"☆".repeat(5 - review.rating)}
+                    {"â˜…".repeat(review.rating)}
+                    {"â˜†".repeat(5 - review.rating)}
                   </span>
                 </div>
 

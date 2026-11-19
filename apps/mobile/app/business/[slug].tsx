@@ -230,10 +230,8 @@ export default function BusinessDetailsScreen() {
   // Load the customer's existing favorite status.
   const loadFavoriteStatus = useCallback(async (businessId: string) => {
     try {
-      const {
-        data: { user },
-        error: authError,
-      } = await supabase.auth.getUser();
+      const { data: { session }, error: authError } = await supabase.auth.getSession();
+      const user = session?.user;
 
       if (authError) throw authError;
 
@@ -264,10 +262,8 @@ export default function BusinessDetailsScreen() {
     try {
       setFavoriteLoading(true);
 
-      const {
-        data: { user },
-        error: authError,
-      } = await supabase.auth.getUser();
+      const { data: { session }, error: authError } = await supabase.auth.getSession();
+      const user = session?.user;
 
       if (authError) throw authError;
 
@@ -316,10 +312,8 @@ export default function BusinessDetailsScreen() {
   // Load the signed-in customer's role and existing review.
   const loadCustomerReview = useCallback(async (businessId: string) => {
     try {
-      const {
-        data: { user },
-        error: authError,
-      } = await supabase.auth.getUser();
+      const { data: { session }, error: authError } = await supabase.auth.getSession();
+      const user = session?.user;
 
       if (authError) throw authError;
 

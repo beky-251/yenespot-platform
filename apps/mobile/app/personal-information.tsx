@@ -38,8 +38,8 @@ export default function PersonalInformationScreen() {
 
     async function loadProfile() {
       try {
-        const { data: authData, error: authError } =
-          await supabase.auth.getUser();
+        const { data: sessionData, error: authError } = await supabase.auth.getSession();
+        const authData = { user: sessionData.session?.user ?? null };
 
         if (authError) throw authError;
 
@@ -96,8 +96,8 @@ export default function PersonalInformationScreen() {
     setError("");
 
     try {
-      const { data: authData, error: authError } =
-        await supabase.auth.getUser();
+      const { data: sessionData, error: authError } = await supabase.auth.getSession();
+        const authData = { user: sessionData.session?.user ?? null };
 
       if (authError) throw authError;
 

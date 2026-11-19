@@ -47,7 +47,7 @@ export default async function SuperAdminConfigurationPage() {
     <main className="min-h-screen bg-cream">
       <header className="border-b border-border bg-white">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-5">
-          <Link href="/" className="text-2xl font-extrabold text-green">
+          <Link href="/" className="text-2xl font-extrabold text-green focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green focus-visible:ring-offset-2">
             Yene<span className="text-gold">Spot</span>
             <span className="ml-2 text-sm font-semibold text-muted">
               Super Admin
@@ -55,7 +55,7 @@ export default async function SuperAdminConfigurationPage() {
           </Link>
 
           <form action={logout}>
-            <button className="rounded-xl border border-border px-4 py-2 text-sm font-semibold text-navy">
+            <button className="rounded-xl border border-border px-4 py-2 text-sm font-semibold text-navy focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green focus-visible:ring-offset-2">
               Sign out
             </button>
           </form>
@@ -65,7 +65,7 @@ export default async function SuperAdminConfigurationPage() {
       <div className="mx-auto max-w-7xl px-5 py-10">
         <Link
           href="/super-admin"
-          className="text-sm font-semibold text-green hover:underline"
+          className="text-sm font-semibold text-green hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green focus-visible:ring-offset-2"
         >
           &larr; Back to super-admin dashboard
         </Link>
@@ -106,7 +106,7 @@ export default async function SuperAdminConfigurationPage() {
               {section.title === "Business Approval Policies" && (
                 <Link
                   href="/admin/business-applications"
-                  className="mt-4 inline-block text-sm font-semibold text-green hover:underline"
+                  className="mt-4 inline-block text-sm font-semibold text-green hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green focus-visible:ring-offset-2"
                 >
                   Open business applications &rarr;
                 </Link>

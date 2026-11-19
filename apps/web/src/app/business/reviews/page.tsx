@@ -25,7 +25,7 @@ export default async function BusinessReviewsPage() {
       <main className="mx-auto max-w-5xl px-4 py-10">
         <Link
           href="/business/dashboard"
-          className="text-sm font-medium text-[#173B35] hover:underline"
+          className="text-sm font-medium text-[#173B35] hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#173B35] focus-visible:ring-offset-2"
         >
           {t(language, "Back to dashboard", "ወደ ዳሽቦርድ ተመለስ")}
         </Link>
@@ -96,7 +96,7 @@ export default async function BusinessReviewsPage() {
     <main className="mx-auto max-w-5xl px-4 py-10">
       <Link
         href="/business/dashboard"
-        className="text-sm font-medium text-[#173B35] hover:underline"
+        className="text-sm font-medium text-[#173B35] hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#173B35] focus-visible:ring-offset-2"
       >
         {t(language, "Back to dashboard", "ወደ ዳሽቦርድ ተመለስ")}
       </Link>
@@ -178,7 +178,7 @@ export default async function BusinessReviewsPage() {
                     {business && (
                       <Link
                         href={`/business/${business.slug}`}
-                        className="mt-1 inline-block text-sm text-[#B98526] hover:underline"
+                        className="mt-1 inline-block text-sm text-[#B98526] hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#173B35] focus-visible:ring-offset-2"
                       >
                         {t(language, "View public listing", "የህዝብ ዝርዝሩን ይመልከቱ")}
                       </Link>

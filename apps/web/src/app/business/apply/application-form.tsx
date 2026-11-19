@@ -38,7 +38,7 @@ export default function ApplicationForm({ categories }: Props) {
   }
 
   const inputClass =
-    "mt-2 w-full rounded-xl border border-border bg-white px-4 py-3 text-sm text-navy outline-none transition focus:border-green focus:ring-2 focus:ring-green/10";
+    "mt-2 w-full rounded-xl border border-border bg-white px-4 py-3 text-sm text-navy outline-none transition focus:border-green focus:ring-2 focus:ring-green/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green focus-visible:ring-offset-2";
 
   const labelClass = "text-sm font-semibold text-navy";
 
@@ -219,7 +219,7 @@ export default function ApplicationForm({ categories }: Props) {
         <button
           type="submit"
           disabled={isPending || categories.length === 0}
-          className="mt-6 w-full rounded-xl bg-green px-6 py-4 text-sm font-bold text-white transition hover:bg-green/90 disabled:cursor-not-allowed disabled:opacity-60 sm:w-auto"
+          className="mt-6 w-full rounded-xl bg-green px-6 py-4 text-sm font-bold text-white transition hover:bg-green/90 disabled:cursor-not-allowed disabled:opacity-60 sm:w-auto focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green focus-visible:ring-offset-2"
         >
           {isPending ? "Submitting application..." : "Submit application"}
         </button>

@@ -60,7 +60,7 @@ export default function UserList({ users }: Props) {
         value={search}
         onChange={(event) => setSearch(event.target.value)}
         placeholder="Enter a name or phone number..."
-        className="w-full rounded-xl border border-border bg-white px-4 py-3 text-sm text-navy outline-none focus:border-green sm:max-w-xl"
+        className="w-full rounded-xl border border-border bg-white px-4 py-3 text-sm text-navy outline-none focus:border-green focus-visible:ring-2 focus-visible:ring-green focus-visible:ring-offset-2 sm:max-w-xl"
       />
 
       <div className="mt-5 flex flex-wrap gap-2">
@@ -82,17 +82,22 @@ export default function UserList({ users }: Props) {
               key={item}
               type="button"
               onClick={() => setFilter(item)}
+              aria-pressed={filter === item}
               className={`rounded-xl px-4 py-2 text-sm font-semibold ${
                 filter === item
                   ? "bg-green text-white"
                   : "border border-border bg-white text-navy"
-              }`}
+              } focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green focus-visible:ring-offset-2`}
             >
               {label} ({count})
             </button>
           );
         })}
       </div>
+
+      <p className="sr-only" role="status" aria-live="polite">
+        {filteredUsers.length} {filteredUsers.length === 1 ? "user found" : "users found"}
+      </p>
 
       {filteredUsers.length === 0 ? (
         <div className="mt-6 rounded-2xl border border-border bg-white p-10 text-center">

@@ -50,7 +50,7 @@ export default async function SuperAdminUsersPage() {
     <main className="min-h-screen bg-cream">
       <header className="border-b border-border bg-white">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-5">
-          <Link href="/" className="text-2xl font-extrabold text-green">
+          <Link href="/" className="text-2xl font-extrabold text-green focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green focus-visible:ring-offset-2">
             Yene<span className="text-gold">Spot</span>
             <span className="ml-2 text-sm font-semibold text-muted">
               Super Admin
@@ -58,7 +58,7 @@ export default async function SuperAdminUsersPage() {
           </Link>
 
           <form action={logout}>
-            <button className="rounded-xl border border-border px-4 py-2 text-sm font-semibold text-navy">
+            <button className="rounded-xl border border-border px-4 py-2 text-sm font-semibold text-navy focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green focus-visible:ring-offset-2">
               Sign out
             </button>
           </form>
@@ -68,7 +68,7 @@ export default async function SuperAdminUsersPage() {
       <div className="mx-auto max-w-7xl px-5 py-10">
         <Link
           href="/super-admin"
-          className="text-sm font-semibold text-green hover:underline"
+          className="text-sm font-semibold text-green hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green focus-visible:ring-offset-2"
         >
           &larr; Back to super-admin dashboard
         </Link>
@@ -87,7 +87,7 @@ export default async function SuperAdminUsersPage() {
         </div>
 
         {error ? (
-          <div className="mt-8 rounded-2xl border border-red-200 bg-white p-6 text-sm text-red-700">
+          <div role="alert" className="mt-8 rounded-2xl border border-red-200 bg-white p-6 text-sm text-red-700">
             We could not load user accounts. Please refresh and try again.
           </div>
         ) : (

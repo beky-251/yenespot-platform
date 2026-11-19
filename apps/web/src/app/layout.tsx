@@ -20,6 +20,11 @@ export const metadata: Metadata = {
   description:
     "Find and explore coffee shops, restaurants, hotels and trusted local businesses in Jimma, Ethiopia with YeneSpot.",
   applicationName: "YeneSpot",
+  icons: {
+    icon: "/brand/yenespot-icon.svg",
+    shortcut: "/brand/yenespot-icon.svg",
+    apple: "/brand/yenespot-icon.svg",
+  },
   keywords: [
     "YeneSpot",
     "Jimma businesses",

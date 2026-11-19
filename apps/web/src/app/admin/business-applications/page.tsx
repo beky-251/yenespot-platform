@@ -28,7 +28,7 @@ export default async function BusinessApplicationsPage() {
     <main className="min-h-screen bg-cream">
       <header className="border-b border-border bg-white">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-5">
-          <Link href="/" className="text-2xl font-extrabold text-green">
+          <Link href="/" className="text-2xl font-extrabold text-green focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green focus-visible:ring-offset-2">
             Yene<span className="text-gold">Spot</span>
             <span className="ml-2 text-sm font-semibold text-muted">
               Admin
@@ -36,7 +36,7 @@ export default async function BusinessApplicationsPage() {
           </Link>
 
           <form action={logout}>
-            <button className="rounded-xl border border-border px-4 py-2 text-sm font-semibold text-navy">
+            <button className="rounded-xl border border-border px-4 py-2 text-sm font-semibold text-navy focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green focus-visible:ring-offset-2">
               Sign out
             </button>
           </form>
@@ -46,9 +46,9 @@ export default async function BusinessApplicationsPage() {
       <div className="mx-auto max-w-7xl px-5 py-10">
         <Link
           href="/admin"
-          className="text-sm font-semibold text-green hover:underline"
+          className="text-sm font-semibold text-green hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green focus-visible:ring-offset-2"
         >
-          ← Back to admin dashboard
+          â† Back to admin dashboard
         </Link>
 
         <div className="mt-6">
@@ -164,7 +164,7 @@ export default async function BusinessApplicationsPage() {
                           href={application.website}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="mt-1 inline-block text-sm font-semibold text-green hover:underline"
+                          className="mt-1 inline-block text-sm font-semibold text-green hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green focus-visible:ring-offset-2"
                         >
                           {application.website}
                         </a>

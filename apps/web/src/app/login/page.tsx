@@ -25,9 +25,9 @@ function LoginContent() {
 
   const callbackErrorMessage =
     callbackError === "verification_failed"
-      ? t("Email verification failed. Please try again.", "የኢሜይል ማረጋገጫው አልተሳካም። እንደገና ይሞክሩ።")
+      ? t("Email verification failed. Please try again.", "á‹¨áŠ¢áˆœá‹­áˆ áˆ›áˆ¨áŒ‹áŒˆáŒ«á‹ áŠ áˆá‰°áˆ³áŠ«áˆá¢ áŠ¥áŠ•á‹°áŒˆáŠ“ á‹­áˆžáŠ­áˆ©á¢")
       : callbackError === "role_verification_failed"
-        ? t("Your account role could not be verified. Please contact support.", "የመለያዎ ሚና ማረጋገጥ አልተቻለም። እባክዎ ድጋፍን ያነጋግሩ።")
+        ? t("Your account role could not be verified. Please contact support.", "á‹¨áˆ˜áˆˆá‹«á‹Ž áˆšáŠ“ áˆ›áˆ¨áŒ‹áŒˆáŒ¥ áŠ áˆá‰°á‰»áˆˆáˆá¢ áŠ¥á‰£áŠ­á‹Ž á‹µáŒ‹ááŠ• á‹«áŠáŒ‹áŒáˆ©á¢")
         : "";
 
   const [showPassword, setShowPassword] = useState(false);
@@ -57,17 +57,17 @@ function LoginContent() {
             Yene<span className="text-gold">Spot</span>
           </span>
           <span className="mt-1 block text-sm text-muted">
-            {t("Discover your local favorites.", "የአካባቢዎን ተወዳጅ ቦታዎች ያግኙ።")}
+            {t("Discover your local favorites.", "á‹¨áŠ áŠ«á‰£á‰¢á‹ŽáŠ• á‰°á‹ˆá‹³áŒ… á‰¦á‰³á‹Žá‰½ á‹«áŒáŠ™á¢")}
           </span>
         </Link>
 
         <section className="rounded-2xl border border-border bg-white p-7 shadow-sm sm:p-9">
           <div className="mb-7">
             <h1 className="text-2xl font-bold text-navy">
-              {t("Welcome back", "እንኳን በደህና ተመለሱ")}
+              {t("Welcome back", "áŠ¥áŠ•áŠ³áŠ• á‰ á‹°áˆ…áŠ“ á‰°áˆ˜áˆˆáˆ±")}
             </h1>
             <p className="mt-2 text-sm text-muted">
-              {t("Sign in to continue exploring YeneSpot.", "YeneSpotን ማሰስዎን ለመቀጠል ይግቡ።")}
+              {t("Sign in to continue exploring YeneSpot.", "YeneSpotáŠ• áˆ›áˆ°áˆµá‹ŽáŠ• áˆˆáˆ˜á‰€áŒ áˆ á‹­áŒá‰¡á¢")}
             </p>
           </div>
 
@@ -82,7 +82,7 @@ function LoginContent() {
               role="status"
               className="mb-5 rounded-xl border border-green/20 bg-green/5 px-4 py-3 text-sm text-green"
             >
-              {t("Your password has been updated successfully. Please sign in with your new password.", "የይለፍ ቃልዎ በተሳካ ሁኔታ ተቀይሯል። እባክዎ በአዲሱ የይለፍ ቃልዎ ይግቡ።")}
+              {t("Your password has been updated successfully. Please sign in with your new password.", "á‹¨á‹­áˆˆá á‰ƒáˆá‹Ž á‰ á‰°áˆ³áŠ« áˆáŠ”á‰³ á‰°á‰€á‹­áˆ¯áˆá¢ áŠ¥á‰£áŠ­á‹Ž á‰ áŠ á‹²áˆ± á‹¨á‹­áˆˆá á‰ƒáˆá‹Ž á‹­áŒá‰¡á¢")}
             </div>
           )}
 
@@ -92,7 +92,7 @@ function LoginContent() {
                 htmlFor="email"
                 className="mb-2 block text-sm font-semibold text-navy"
               >
-                {t("Email address", "የኢሜይል አድራሻ")}
+                {t("Email address", "á‹¨áŠ¢áˆœá‹­áˆ áŠ á‹µáˆ«áˆ»")}
               </label>
               <input
                 id="email"
@@ -102,7 +102,7 @@ function LoginContent() {
                 required
                 maxLength={254}
                 placeholder="you@example.com"
-                className="w-full rounded-xl border border-border bg-cream px-4 py-3 text-sm outline-none transition focus:border-green focus:ring-2 focus:ring-green/10"
+                className="w-full rounded-xl border border-border bg-cream px-4 py-3 text-sm outline-none transition focus:border-green focus:ring-2 focus:ring-green/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green focus-visible:ring-offset-2"
               />
             </div>
 
@@ -111,7 +111,7 @@ function LoginContent() {
                 htmlFor="password"
                 className="mb-2 block text-sm font-semibold text-navy"
               >
-                {t("Password", "የይለፍ ቃል")}
+                {t("Password", "á‹¨á‹­áˆˆá á‰ƒáˆ")}
               </label>
               <div className="relative">
                 <input
@@ -121,15 +121,15 @@ function LoginContent() {
                   autoComplete="current-password"
                   required
                   maxLength={128}
-                  placeholder={t("Enter your password", "የይለፍ ቃልዎን ያስገቡ")}
-                  className="w-full rounded-xl border border-border bg-cream px-4 py-3 pr-20 text-sm outline-none transition focus:border-green focus:ring-2 focus:ring-green/10"
+                  placeholder={t("Enter your password", "á‹¨á‹­áˆˆá á‰ƒáˆá‹ŽáŠ• á‹«áˆµáŒˆá‰¡")}
+                  className="w-full rounded-xl border border-border bg-cream px-4 py-3 pr-20 text-sm outline-none transition focus:border-green focus:ring-2 focus:ring-green/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green focus-visible:ring-offset-2"
                 />
                 <button
                   type="button"
                   onClick={() => setShowPassword(!showPassword)}
-                  className="absolute right-3 top-1/2 -translate-y-1/2 text-xs font-semibold text-green"
+                  className="absolute right-3 top-1/2 -translate-y-1/2 text-xs font-semibold text-green focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green focus-visible:ring-offset-2"
                 >
-                  {showPassword ? t("Hide", "ደብቅ") : t("Show", "አሳይ")}
+                  {showPassword ? t("Hide", "á‹°á‰¥á‰…") : t("Show", "áŠ áˆ³á‹­")}
                 </button>
               </div>
             </div>
@@ -137,9 +137,9 @@ function LoginContent() {
             <div className="-mt-2 text-right">
               <Link
                 href="/forgot-password"
-                className="text-sm font-semibold text-green hover:text-gold"
+                className="text-sm font-semibold text-green hover:text-gold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green focus-visible:ring-offset-2"
               >
-                {t("Forgot password?", "የይለፍ ቃልዎን ረሱ?")}
+                {t("Forgot password?", "á‹¨á‹­áˆˆá á‰ƒáˆá‹ŽáŠ• áˆ¨áˆ±?")}
               </Link>
             </div>
 
@@ -155,28 +155,28 @@ function LoginContent() {
             <button
               type="submit"
               disabled={isPending}
-              className="w-full rounded-xl bg-green px-5 py-3.5 text-sm font-bold text-white transition hover:bg-navy disabled:cursor-not-allowed disabled:opacity-60"
+              className="w-full rounded-xl bg-green px-5 py-3.5 text-sm font-bold text-white transition hover:bg-navy disabled:cursor-not-allowed disabled:opacity-60 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green focus-visible:ring-offset-2"
             >
-              {isPending ? t("Signing in...", "በመግባት ላይ...") : t("Sign in", "ግባ")}
+              {isPending ? t("Signing in...", "á‰ áˆ˜áŒá‰£á‰µ áˆ‹á‹­...") : t("Sign in", "áŒá‰£")}
             </button>
           </form>
 
           <div className="my-6 border-t border-border" />
 
           <p className="text-center text-sm text-muted">
-            {t("Don't have an account?", "መለያ የለዎትም?")}{" "}
+            {t("Don't have an account?", "áˆ˜áˆˆá‹« á‹¨áˆˆá‹Žá‰µáˆ?")}{" "}
             <Link
               href="/register"
-              className="font-bold text-green hover:text-gold"
+              className="font-bold text-green hover:text-gold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green focus-visible:ring-offset-2"
             >
-              {t("Create an account", "መለያ ይፍጠሩ")}
+              {t("Create an account", "áˆ˜áˆˆá‹« á‹­ááŒ áˆ©")}
             </Link>
           </p>
         </section>
 
         <p className="mt-6 text-center text-xs text-muted">
-          <Link href="/" className="hover:text-green">
-            ← {t("Back to YeneSpot homepage", "ወደ YeneSpot መነሻ ገጽ ተመለስ")}
+          <Link href="/" className="hover:text-green focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green focus-visible:ring-offset-2">
+            â† {t("Back to YeneSpot homepage", "á‹ˆá‹° YeneSpot áˆ˜áŠáˆ» áŒˆáŒ½ á‰°áˆ˜áˆˆáˆµ")}
           </Link>
         </p>
       </div>

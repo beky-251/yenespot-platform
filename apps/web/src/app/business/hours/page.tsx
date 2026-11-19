@@ -1,4 +1,4 @@
-import Link from "next/link";
+﻿import Link from "next/link";
 import { requireRole } from "@/lib/auth/dal";
 import { createClient } from "@/lib/supabase/server";
 import { getAppLanguage, t } from "@/lib/i18n";
@@ -24,20 +24,20 @@ export default async function BusinessHoursPage() {
       <main className="mx-auto max-w-3xl px-5 py-12">
         <Link
           href="/business/dashboard"
-          className="text-sm font-medium text-[#173B35]"
+          className="text-sm font-medium text-[#173B35] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#173B35] focus-visible:ring-offset-2"
         >
-          {t(language, "← Back to dashboard", "← ወደ ዳሽቦርድ ተመለስ")}
+          {t(language, "â† Back to dashboard", "â† á‹ˆá‹° á‹³áˆ½á‰¦áˆ­á‹µ á‰°áˆ˜áˆˆáˆµ")}
         </Link>
 
-        <div className="mt-8 rounded-xl border border-[#E8E6DF] bg-white p-8">
+        <div role="alert" className="mt-8 rounded-xl border border-[#E8E6DF] bg-white p-8">
           <h1 className="text-xl font-bold text-[#172B3A]">
-            {t(language, "Business not found", "ንግዱ አልተገኘም")}
+            {t(language, "Business not found", "áŠ•áŒá‹± áŠ áˆá‰°áŒˆáŠ˜áˆ")}
           </h1>
           <p className="mt-2 text-sm text-[#747C80]">
             {t(
               language,
               "We could not find a business associated with your account.",
-              "ከመለያዎ ጋር የተያያዘ ንግድ ማግኘት አልቻልንም።",
+              "áŠ¨áˆ˜áˆˆá‹«á‹Ž áŒ‹áˆ­ á‹¨á‰°á‹«á‹«á‹˜ áŠ•áŒá‹µ áˆ›áŒáŠ˜á‰µ áŠ áˆá‰»áˆáŠ•áˆá¢",
             )}
           </p>
         </div>
@@ -60,25 +60,25 @@ export default async function BusinessHoursPage() {
       <div className="mx-auto max-w-4xl">
         <Link
           href="/business/dashboard"
-          className="text-sm font-medium text-[#173B35] hover:underline"
+          className="text-sm font-medium text-[#173B35] hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#173B35] focus-visible:ring-offset-2"
         >
-          {t(language, "← Back to dashboard", "← ወደ ዳሽቦርድ ተመለስ")}
+          {t(language, "â† Back to dashboard", "â† á‹ˆá‹° á‹³áˆ½á‰¦áˆ­á‹µ á‰°áˆ˜áˆˆáˆµ")}
         </Link>
 
         <header className="mb-8 mt-6">
           <p className="text-sm font-semibold uppercase tracking-wider text-[#B98526]">
-            {t(language, "Business Management", "የንግድ አስተዳደር")}
+            {t(language, "Business Management", "á‹¨áŠ•áŒá‹µ áŠ áˆµá‰°á‹³á‹°áˆ­")}
           </p>
 
           <h1 className="mt-2 text-3xl font-bold text-[#172B3A]">
-            {t(language, "Business Hours", "የንግድ ሥራ ሰዓቶች")}
+            {t(language, "Business Hours", "á‹¨áŠ•áŒá‹µ áˆ¥áˆ« áˆ°á‹“á‰¶á‰½")}
           </h1>
 
           <p className="mt-2 text-[#747C80]">
             {t(
               language,
               `Manage when ${business.name} is open to customers.`,
-              `${business.name} ለደንበኞች የሚከፈትበትን ሰዓት ያስተዳድሩ።`,
+              `${business.name} áˆˆá‹°áŠ•á‰ áŠžá‰½ á‹¨áˆšáŠ¨áˆá‰µá‰ á‰µáŠ• áˆ°á‹“á‰µ á‹«áˆµá‰°á‹³á‹µáˆ©á¢`,
             )}
           </p>
         </header>

@@ -1,4 +1,4 @@
-import Image from "next/image";
+﻿import Image from "next/image";
 import { Suspense } from "react";
 import { connection } from "next/server";
 import Link from "next/link";
@@ -7,64 +7,64 @@ import HomeHeaderControls from "./components/home-header-controls";
 
 const categories = [
   {
-    name: "Coffee Shops", nameAm: "የቡና ቤቶች",
+    name: "Coffee Shops", nameAm: "á‹¨á‰¡áŠ“ á‰¤á‰¶á‰½",
     slug: "coffee-shops",
-    icon: "☕",
-    description: "Coffee and buna", descriptionAm: "ቡና እና ቡና ሥነ ሥርዓት",
+    icon: "â˜•",
+    description: "Coffee and buna", descriptionAm: "á‰¡áŠ“ áŠ¥áŠ“ á‰¡áŠ“ áˆ¥áŠ áˆ¥áˆ­á‹“á‰µ",
   },
   {
-    name: "Restaurants", nameAm: "ምግብ ቤቶች",
+    name: "Restaurants", nameAm: "áˆáŒá‰¥ á‰¤á‰¶á‰½",
     slug: "restaurants",
-    icon: "🍽️",
-    description: "Great places to eat", descriptionAm: "ጥሩ ምግብ የሚያገኙባቸው ቦታዎች",
+    icon: "ðŸ½ï¸",
+    description: "Great places to eat", descriptionAm: "áŒ¥áˆ© áˆáŒá‰¥ á‹¨áˆšá‹«áŒˆáŠ™á‰£á‰¸á‹ á‰¦á‰³á‹Žá‰½",
   },
   {
-    name: "Hotels", nameAm: "ሆቴሎች",
+    name: "Hotels", nameAm: "áˆ†á‰´áˆŽá‰½",
     slug: "hotels",
-    icon: "🏨",
-    description: "Places to stay", descriptionAm: "የሚቆዩባቸው ቦታዎች",
+    icon: "ðŸ¨",
+    description: "Places to stay", descriptionAm: "á‹¨áˆšá‰†á‹©á‰£á‰¸á‹ á‰¦á‰³á‹Žá‰½",
   },
   {
-    name: "Bakeries", nameAm: "ዳቦ ቤቶች",
+    name: "Bakeries", nameAm: "á‹³á‰¦ á‰¤á‰¶á‰½",
     slug: "bakeries",
-    icon: "🥐",
-    description: "Freshly baked", descriptionAm: "ትኩስ የተጋገሩ ምግቦች",
+    icon: "ðŸ¥",
+    description: "Freshly baked", descriptionAm: "á‰µáŠ©áˆµ á‹¨á‰°áŒ‹áŒˆáˆ© áˆáŒá‰¦á‰½",
   },
   {
-    name: "Shopping", nameAm: "ግብይት",
+    name: "Shopping", nameAm: "áŒá‰¥á‹­á‰µ",
     slug: "shopping",
-    icon: "🛍️",
-    description: "Explore local shops", descriptionAm: "አካባቢያዊ ሱቆችን ያስሱ",
+    icon: "ðŸ›ï¸",
+    description: "Explore local shops", descriptionAm: "áŠ áŠ«á‰£á‰¢á‹«á‹Š áˆ±á‰†á‰½áŠ• á‹«áˆµáˆ±",
   },
   {
-    name: "Beauty & Wellness", nameAm: "ውበት እና ጤና",
+    name: "Beauty & Wellness", nameAm: "á‹á‰ á‰µ áŠ¥áŠ“ áŒ¤áŠ“",
     slug: "beauty-wellness",
-    icon: "✨",
-    description: "Beauty and wellness services", descriptionAm: "የውበት እና የጤና አገልግሎቶች",
+    icon: "âœ¨",
+    description: "Beauty and wellness services", descriptionAm: "á‹¨á‹á‰ á‰µ áŠ¥áŠ“ á‹¨áŒ¤áŠ“ áŠ áŒˆáˆáŒáˆŽá‰¶á‰½",
   },
 ];
 
 const benefits = [
   {
     number: "01",
-    title: "Search locally", titleAm: "በአካባቢዎ ይፈልጉ",
+    title: "Search locally", titleAm: "á‰ áŠ áŠ«á‰£á‰¢á‹Ž á‹­áˆáˆáŒ‰",
     description:
-      "Find businesses by name, category and location without wasting time.", descriptionAm: "ጊዜ ሳያባክኑ ንግዶችን በስም፣ በምድብ እና በአካባቢ ይፈልጉ።",
-    icon: "⌕",
+      "Find businesses by name, category and location without wasting time.", descriptionAm: "áŒŠá‹œ áˆ³á‹«á‰£áŠ­áŠ‘ áŠ•áŒá‹¶á‰½áŠ• á‰ áˆµáˆá£ á‰ áˆá‹µá‰¥ áŠ¥áŠ“ á‰ áŠ áŠ«á‰£á‰¢ á‹­áˆáˆáŒ‰á¢",
+    icon: "âŒ•",
   },
   {
     number: "02",
-    title: "Discover more", titleAm: "ተጨማሪ ያግኙ",
+    title: "Discover more", titleAm: "á‰°áŒ¨áˆ›áˆª á‹«áŒáŠ™",
     description:
-      "Explore local places, compare options and find something new.", descriptionAm: "አካባቢያዊ ቦታዎችን ያስሱ፣ አማራጮችን ያወዳድሩ እና አዲስ ነገር ያግኙ።",
-    icon: "✦",
+      "Explore local places, compare options and find something new.", descriptionAm: "áŠ áŠ«á‰£á‰¢á‹«á‹Š á‰¦á‰³á‹Žá‰½áŠ• á‹«áˆµáˆ±á£ áŠ áˆ›áˆ«áŒ®á‰½áŠ• á‹«á‹ˆá‹³á‹µáˆ© áŠ¥áŠ“ áŠ á‹²áˆµ áŠáŒˆáˆ­ á‹«áŒáŠ™á¢",
+    icon: "âœ¦",
   },
   {
     number: "03",
-    title: "Choose confidently", titleAm: "በእርግጠኝነት ይምረጡ",
+    title: "Choose confidently", titleAm: "á‰ áŠ¥áˆ­áŒáŒ áŠáŠá‰µ á‹­áˆáˆ¨áŒ¡",
     description:
-      "Business information and customer reviews will help you make decisions.", descriptionAm: "የንግድ መረጃዎች እና የደንበኞች ግምገማዎች ውሳኔ እንዲያደርጉ ይረዱዎታል።",
-    icon: "✓",
+      "Business information and customer reviews will help you make decisions.", descriptionAm: "á‹¨áŠ•áŒá‹µ áˆ˜áˆ¨áŒƒá‹Žá‰½ áŠ¥áŠ“ á‹¨á‹°áŠ•á‰ áŠžá‰½ áŒáˆáŒˆáˆ›á‹Žá‰½ á‹áˆ³áŠ” áŠ¥áŠ•á‹²á‹«á‹°áˆ­áŒ‰ á‹­áˆ¨á‹±á‹Žá‰³áˆá¢",
+    icon: "âœ“",
   },
 ];
 
@@ -117,34 +117,34 @@ async function HomeContent() {
       {/* Navigation */}
       <header className="sticky top-0 z-50 border-b border-border bg-white/95 backdrop-blur">
         <div className="mx-auto flex min-h-[76px] max-w-7xl flex-wrap items-center justify-between gap-3 px-4 py-3 sm:px-8">
-          <Link href="/" className="flex items-center gap-3">
-            <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-green text-xl font-bold text-white">
-              Y
-            </span>
-
-            <span className="text-2xl font-extrabold tracking-tight text-navy">
-              Yene<span className="text-green">Spot</span>
-              <span className="ml-1 text-gold">.</span>
-            </span>
+          <Link href="/" className="flex items-center">
+            <Image
+              src="/brand/yenespot-horizontal-dark.svg"
+              alt="YeneSpot - Discover Your Place"
+              width={240}
+              height={72}
+              priority
+              className="h-10 w-auto"
+            />
           </Link>
 
           <nav className="hidden items-center gap-8 text-sm font-semibold text-charcoal lg:flex">
             <a href="#categories" className="transition hover:text-green">
-              {t("Explore", "ያስሱ")}
+              {t("Explore", "á‹«áˆµáˆ±")}
             </a>
 
             <a href="#featured" className="transition hover:text-green">
-              {t("Featured", "ተለይተው የቀረቡ")}
+              {t("Featured", "á‰°áˆˆá‹­á‰°á‹ á‹¨á‰€áˆ¨á‰¡")}
             </a>
 
             <a href="#how-it-works" className="transition hover:text-green">
-              {t("How it works", "እንዴት እንደሚሰራ")}
+              {t("How it works", "áŠ¥áŠ•á‹´á‰µ áŠ¥áŠ•á‹°áˆšáˆ°áˆ«")}
             </a>
           </nav>
 
           <div className="flex w-full items-center justify-between gap-2 sm:w-auto sm:justify-end">
             <span className="hidden items-center gap-2 rounded-full bg-cream px-4 py-2 text-sm font-medium text-charcoal lg:flex">
-              <span>📍</span>
+              <span>ðŸ“</span>
               Jimma, Ethiopia
             </span>
 
@@ -152,7 +152,7 @@ async function HomeContent() {
               href="#business"
               className="whitespace-nowrap rounded-lg bg-green px-3 py-2 text-xs font-semibold text-white transition hover:bg-navy sm:px-5 sm:py-3 sm:text-sm"
             >
-              {t("For businesses", "ለንግዶች")}
+              {t("For businesses", "áˆˆáŠ•áŒá‹¶á‰½")}
             </a>
             <HomeHeaderControls initialLanguage={language} isLoggedIn={Boolean(user)} />
           </div>
@@ -168,20 +168,20 @@ async function HomeContent() {
           <div>
             <div className="mb-7 inline-flex items-center gap-2 rounded-full border border-green/10 bg-white px-4 py-2 text-sm font-semibold text-green shadow-sm">
               <span className="h-2 w-2 rounded-full bg-gold" />
-              {t("YOUR CITY. YOUR DISCOVERIES.", "ከተማዎ። ግኝቶችዎ።")}
+              {t("YOUR CITY. YOUR DISCOVERIES.", "áŠ¨á‰°áˆ›á‹Žá¢ áŒáŠá‰¶á‰½á‹Žá¢")}
             </div>
 
             <h1 className="max-w-2xl text-5xl font-extrabold leading-[1.12] tracking-tight text-navy sm:text-6xl lg:text-7xl">
-              {t("Discover the", "ያግኙ")}
-              <span className="block text-green">{t("best around", "በአካባቢዎ ያሉ ምርጥ ቦታዎች")}</span>
+              {t("Discover the", "á‹«áŒáŠ™")}
+              <span className="block text-green">{t("best around", "á‰ áŠ áŠ«á‰£á‰¢á‹Ž á‹«áˆ‰ áˆáˆ­áŒ¥ á‰¦á‰³á‹Žá‰½")}</span>
               <span className="relative inline-block">
-                {t("you.", "እርስዎ አጠገብ።")}
+                {t("you.", "áŠ¥áˆ­áˆµá‹Ž áŠ áŒ áŒˆá‰¥á¢")}
                 <span className="absolute -bottom-1 left-0 h-2 w-full rounded-full bg-gold/70" />
               </span>
             </h1>
 
             <p className="mt-8 max-w-xl text-lg leading-8 text-muted">
-              {t("Your guide to local businesses in Jimma. Find coffee shops, restaurants, hotels and the places that make your city special.", "በጅማ የሚገኙ አካባቢያዊ ንግዶችን የሚያስተዋውቅዎ መመሪያ። የቡና ቤቶችን፣ ምግብ ቤቶችን፣ ሆቴሎችን እና ከተማዎን ልዩ የሚያደርጉ ቦታዎችን ያግኙ።")}
+              {t("Your guide to local businesses in Jimma. Find coffee shops, restaurants, hotels and the places that make your city special.", "á‰ áŒ…áˆ› á‹¨áˆšáŒˆáŠ™ áŠ áŠ«á‰£á‰¢á‹«á‹Š áŠ•áŒá‹¶á‰½áŠ• á‹¨áˆšá‹«áˆµá‰°á‹‹á‹á‰…á‹Ž áˆ˜áˆ˜áˆªá‹«á¢ á‹¨á‰¡áŠ“ á‰¤á‰¶á‰½áŠ•á£ áˆáŒá‰¥ á‰¤á‰¶á‰½áŠ•á£ áˆ†á‰´áˆŽá‰½áŠ• áŠ¥áŠ“ áŠ¨á‰°áˆ›á‹ŽáŠ• áˆá‹© á‹¨áˆšá‹«á‹°áˆ­áŒ‰ á‰¦á‰³á‹Žá‰½áŠ• á‹«áŒáŠ™á¢")}
 
             </p>
 
@@ -193,15 +193,15 @@ async function HomeContent() {
             >
               <div className="flex min-w-0 flex-1 items-center gap-3 px-3">
                 <span className="text-2xl text-muted" aria-hidden="true">
-                  ⌕
+                  âŒ•
                 </span>
 
                 <input
                   type="search"
                   name="q"
-                  placeholder={t("Search businesses, places...", "ንግዶችን፣ ቦታዎችን ይፈልጉ...")}
-                  aria-label={t("Search businesses", "ንግዶችን ይፈልጉ")}
-                  className="min-w-0 flex-1 bg-transparent py-3 text-sm text-navy outline-none placeholder:text-muted"
+                  placeholder={t("Search businesses, places...", "áŠ•áŒá‹¶á‰½áŠ•á£ á‰¦á‰³á‹Žá‰½áŠ• á‹­áˆáˆáŒ‰...")}
+                  aria-label={t("Search businesses", "áŠ•áŒá‹¶á‰½áŠ• á‹­áˆáˆáŒ‰")}
+                  className="min-w-0 flex-1 bg-transparent py-3 text-sm text-navy outline-none placeholder:text-muted focus-visible:ring-2 focus-visible:ring-green focus-visible:ring-offset-2"
                 />
               </div>
 
@@ -209,19 +209,19 @@ async function HomeContent() {
                 type="submit"
                 className="rounded-xl bg-green px-8 py-4 font-semibold text-white transition hover:bg-navy"
               >
-                {t("Search businesses", "ንግዶችን ይፈልጉ")}
+                {t("Search businesses", "áŠ•áŒá‹¶á‰½áŠ• á‹­áˆáˆáŒ‰")}
               </button>
             </form>
 
             <div className="mt-7 flex flex-wrap items-center gap-x-6 gap-y-3 text-sm text-muted">
               <span className="flex items-center gap-2">
-                <span className="text-gold">✓</span>
-                {t("Discover local places", "አካባቢያዊ ቦታዎችን ያግኙ")}
+                <span className="text-gold">âœ“</span>
+                {t("Discover local places", "áŠ áŠ«á‰£á‰¢á‹«á‹Š á‰¦á‰³á‹Žá‰½áŠ• á‹«áŒáŠ™")}
               </span>
 
               <span className="flex items-center gap-2">
-                <span className="text-gold">✓</span>
-                {t("Explore by category", "በምድብ ያስሱ")}
+                <span className="text-gold">âœ“</span>
+                {t("Explore by category", "á‰ áˆá‹µá‰¥ á‹«áˆµáˆ±")}
               </span>
             </div>
           </div>
@@ -235,7 +235,7 @@ async function HomeContent() {
               <div className="relative">
                 <div className="flex items-center justify-between">
                   <span className="text-sm font-semibold tracking-widest text-white/70">
-                    {t("EXPLORE YOUR CITY", "ከተማዎን ያስሱ")}
+                    {t("EXPLORE YOUR CITY", "áŠ¨á‰°áˆ›á‹ŽáŠ• á‹«áˆµáˆ±")}
                   </span>
 
                   <span className="rounded-full bg-gold px-3 py-1 text-xs font-bold text-navy">
@@ -244,28 +244,28 @@ async function HomeContent() {
                 </div>
 
                 <h2 className="mt-14 max-w-xs text-4xl font-bold leading-tight text-white sm:text-5xl">
-                  {t("Your next", "የሚቀጥለው")}
-                  <span className="block text-gold">{t("favorite place", "ተወዳጅ ቦታዎ")}</span>
-                  {t("is closer.", "በቅርብዎ ይገኛል።")}
+                  {t("Your next", "á‹¨áˆšá‰€áŒ¥áˆˆá‹")}
+                  <span className="block text-gold">{t("favorite place", "á‰°á‹ˆá‹³áŒ… á‰¦á‰³á‹Ž")}</span>
+                  {t("is closer.", "á‰ á‰…áˆ­á‰¥á‹Ž á‹­áŒˆáŠ›áˆá¢")}
                 </h2>
 
                 <p className="mt-5 max-w-xs leading-7 text-white/70">
-                  {t("Discover the people, places and businesses that make Jimma unique.", "ጅማን ልዩ የሚያደርጉትን ሰዎች፣ ቦታዎች እና ንግዶች ያግኙ።")}
+                  {t("Discover the people, places and businesses that make Jimma unique.", "áŒ…áˆ›áŠ• áˆá‹© á‹¨áˆšá‹«á‹°áˆ­áŒ‰á‰µáŠ• áˆ°á‹Žá‰½á£ á‰¦á‰³á‹Žá‰½ áŠ¥áŠ“ áŠ•áŒá‹¶á‰½ á‹«áŒáŠ™á¢")}
 
                 </p>
 
                 <div className="mt-12 grid grid-cols-2 gap-3">
                   <div className="rounded-2xl bg-white p-4">
-                    <span className="text-3xl">☕</span>
-                    <p className="mt-3 font-bold text-navy">{t("Coffee & buna", "ቡና እና ቡና ሥነ ሥርዓት")}</p>
-                    <p className="mt-1 text-xs text-muted">{t("Find your spot", "የሚወዱትን ቦታ ያግኙ")}</p>
+                    <span className="text-3xl">â˜•</span>
+                    <p className="mt-3 font-bold text-navy">{t("Coffee & buna", "á‰¡áŠ“ áŠ¥áŠ“ á‰¡áŠ“ áˆ¥áŠ áˆ¥áˆ­á‹“á‰µ")}</p>
+                    <p className="mt-1 text-xs text-muted">{t("Find your spot", "á‹¨áˆšá‹ˆá‹±á‰µáŠ• á‰¦á‰³ á‹«áŒáŠ™")}</p>
                   </div>
 
                   <div className="rounded-2xl bg-white p-4">
-                    <span className="text-3xl">🍽️</span>
-                    <p className="mt-3 font-bold text-navy">{t("Restaurants", "ምግብ ቤቶች")}</p>
+                    <span className="text-3xl">ðŸ½ï¸</span>
+                    <p className="mt-3 font-bold text-navy">{t("Restaurants", "áˆáŒá‰¥ á‰¤á‰¶á‰½")}</p>
                     <p className="mt-1 text-xs text-muted">
-                      {t("Discover flavors", "ጣዕሞችን ያግኙ")}
+                      {t("Discover flavors", "áŒ£á‹•áˆžá‰½áŠ• á‹«áŒáŠ™")}
                     </p>
                   </div>
                 </div>
@@ -274,11 +274,11 @@ async function HomeContent() {
               <div className="absolute -bottom-5 -right-4 rounded-2xl border border-border bg-white px-5 py-4 shadow-xl sm:-right-8">
                 <div className="flex items-center gap-3">
                   <span className="flex h-10 w-10 items-center justify-center rounded-full bg-gold/20 text-xl">
-                    📍
+                    ðŸ“
                   </span>
 
                   <div>
-                    <p className="text-xs text-muted">{t("Starting in", "የሚነሳ ቦታ")}</p>
+                    <p className="text-xs text-muted">{t("Starting in", "á‹¨áˆšáŠáˆ³ á‰¦á‰³")}</p>
                     <p className="font-bold text-navy">Jimma, Ethiopia</p>
                   </div>
                 </div>
@@ -296,20 +296,20 @@ async function HomeContent() {
           <div className="flex flex-col justify-between gap-5 sm:flex-row sm:items-end">
             <div>
               <p className="text-sm font-bold uppercase tracking-[0.2em] text-green">
-                {t("Explore categories", "ምድቦችን ያስሱ")}
+                {t("Explore categories", "áˆá‹µá‰¦á‰½áŠ• á‹«áˆµáˆ±")}
               </p>
 
               <h2 className="mt-3 text-3xl font-extrabold tracking-tight text-navy sm:text-4xl">
-                {t("What are you looking for?", "ምን እየፈለጉ ነው?")}
+                {t("What are you looking for?", "áˆáŠ• áŠ¥á‹¨áˆáˆˆáŒ‰ áŠá‹?")}
               </h2>
 
               <p className="mt-3 max-w-xl leading-7 text-muted">
-                From your morning coffee to your next weekend stay, {t("discover local places in one spot.", "ከጠዋት ቡናዎ እስከ የሳምንት መጨረሻ ቆይታዎ ድረስ ያሉ አካባቢያዊ ቦታዎችን በአንድ ቦታ ያግኙ።")}
+                From your morning coffee to your next weekend stay, {t("discover local places in one spot.", "áŠ¨áŒ á‹‹á‰µ á‰¡áŠ“á‹Ž áŠ¥áˆµáŠ¨ á‹¨áˆ³áˆáŠ•á‰µ áˆ˜áŒ¨áˆ¨áˆ» á‰†á‹­á‰³á‹Ž á‹µáˆ¨áˆµ á‹«áˆ‰ áŠ áŠ«á‰£á‰¢á‹«á‹Š á‰¦á‰³á‹Žá‰½áŠ• á‰ áŠ áŠ•á‹µ á‰¦á‰³ á‹«áŒáŠ™á¢")}
               </p>
             </div>
 
             <span className="text-sm font-semibold text-green">
-              {t("10 business categories", "10 የንግድ ምድቦች")}
+              {t("10 business categories", "10 á‹¨áŠ•áŒá‹µ áˆá‹µá‰¦á‰½")}
             </span>
           </div>
 
@@ -342,15 +342,15 @@ async function HomeContent() {
         <div className="mx-auto max-w-7xl px-5 sm:px-8">
           <div className="text-center">
             <p className="text-sm font-bold uppercase tracking-[0.2em] text-green">
-              {t("Local discoveries", "አካባቢያዊ ግኝቶች")}
+              {t("Local discoveries", "áŠ áŠ«á‰£á‰¢á‹«á‹Š áŒáŠá‰¶á‰½")}
             </p>
 
             <h2 className="mt-3 text-3xl font-extrabold tracking-tight text-navy sm:text-4xl">
-              {t("Featured businesses", "ተለይተው የቀረቡ ንግዶች")}
+              {t("Featured businesses", "á‰°áˆˆá‹­á‰°á‹ á‹¨á‰€áˆ¨á‰¡ áŠ•áŒá‹¶á‰½")}
             </h2>
 
             <p className="mx-auto mt-3 max-w-xl leading-7 text-muted">
-              {t("Discover places worth visiting in your city.", "በከተማዎ ውስጥ ሊጎበኙ የሚገቡ ቦታዎችን ያግኙ።")}
+              {t("Discover places worth visiting in your city.", "á‰ áŠ¨á‰°áˆ›á‹Ž á‹áˆµáŒ¥ áˆŠáŒŽá‰ áŠ™ á‹¨áˆšáŒˆá‰¡ á‰¦á‰³á‹Žá‰½áŠ• á‹«áŒáŠ™á¢")}
             </p>
           </div>
 
@@ -384,7 +384,7 @@ async function HomeContent() {
 
                         {business.verified && (
                           <span className="absolute right-4 top-4 rounded-full bg-white px-3 py-1 text-xs font-bold text-green shadow">
-                            {t("✓ Verified", "✓ የተረጋገጠ")}
+                            {t("âœ“ Verified", "âœ“ á‹¨á‰°áˆ¨áŒ‹áŒˆáŒ ")}
                           </span>
                         )}
                       </div>
@@ -401,14 +401,14 @@ async function HomeContent() {
 
                         <div className="mt-4 flex items-center justify-between gap-3">
                           <span className="text-sm text-muted">
-                            📍{" "}
+                            ðŸ“{" "}
                             {[business.neighborhood, business.city]
                               .filter(Boolean)
                               .join(", ")}
                           </span>
 
                           <span className="whitespace-nowrap text-sm font-semibold text-gold">
-                            ★{" "}
+                            â˜…{" "}
                             {Number(
                               business.average_rating ?? 0,
                             ).toFixed(1)}
@@ -426,15 +426,15 @@ async function HomeContent() {
             ) : (
               <div className="rounded-3xl border border-dashed border-green/30 bg-white px-6 py-14 text-center">
                 <span className="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl bg-cream text-3xl">
-                  🏪
+                  ðŸª
                 </span>
 
                 <h3 className="mt-5 text-xl font-bold text-navy">
-                  {t("Local businesses are coming soon", "አካባቢያዊ ንግዶች በቅርቡ ይቀርባሉ")}
+                  {t("Local businesses are coming soon", "áŠ áŠ«á‰£á‰¢á‹«á‹Š áŠ•áŒá‹¶á‰½ á‰ á‰…áˆ­á‰¡ á‹­á‰€áˆ­á‰£áˆ‰")}
                 </h3>
 
                 <p className="mx-auto mt-3 max-w-lg leading-7 text-muted">
-                  {t("Approved business listings will appear here when they are available.", "የተፈቀዱ የንግድ ዝርዝሮች ሲዘጋጁ እዚህ ይታያሉ።")}
+                  {t("Approved business listings will appear here when they are available.", "á‹¨á‰°áˆá‰€á‹± á‹¨áŠ•áŒá‹µ á‹áˆ­á‹áˆ®á‰½ áˆ²á‹˜áŒ‹áŒ áŠ¥á‹šáˆ… á‹­á‰³á‹«áˆ‰á¢")}
                 </p>
               </div>
             )}
@@ -447,11 +447,11 @@ async function HomeContent() {
         <div className="mx-auto max-w-7xl px-5 sm:px-8">
           <div className="text-center">
             <p className="text-sm font-bold uppercase tracking-[0.2em] text-green">
-              {t("Simple discovery", "ቀላል ፍለጋ")}
+              {t("Simple discovery", "á‰€áˆ‹áˆ ááˆˆáŒ‹")}
             </p>
 
             <h2 className="mt-3 text-3xl font-extrabold tracking-tight text-navy sm:text-4xl">
-              {t("Find your place in three steps", "በሶስት ደረጃዎች ቦታዎን ያግኙ")}
+              {t("Find your place in three steps", "á‰ áˆ¶áˆµá‰µ á‹°áˆ¨áŒƒá‹Žá‰½ á‰¦á‰³á‹ŽáŠ• á‹«áŒáŠ™")}
             </h2>
           </div>
 
@@ -490,27 +490,27 @@ async function HomeContent() {
           <div className="grid items-center gap-8 md:grid-cols-2">
             <div>
               <p className="text-sm font-bold uppercase tracking-[0.2em] text-gold">
-                {t("For local businesses", "ለአካባቢያዊ ንግዶች")}
+                {t("For local businesses", "áˆˆáŠ áŠ«á‰£á‰¢á‹«á‹Š áŠ•áŒá‹¶á‰½")}
               </p>
 
               <h2 className="mt-4 text-3xl font-extrabold leading-tight text-white sm:text-4xl">
-                {t("Help more people discover your business.", "ብዙ ሰዎች ንግድዎን እንዲያውቁ ያግዙ።")}
+                {t("Help more people discover your business.", "á‰¥á‹™ áˆ°á‹Žá‰½ áŠ•áŒá‹µá‹ŽáŠ• áŠ¥áŠ•á‹²á‹«á‹á‰ á‹«áŒá‹™á¢")}
               </h2>
 
               <p className="mt-5 max-w-lg leading-7 text-white/70">
-                {t("YeneSpot is being built to connect local businesses with customers searching for places and services in their city.", "YeneSpot በከተማቸው ውስጥ ቦታዎችንና አገልግሎቶችን ከሚፈልጉ ደንበኞች ጋር አካባቢያዊ ንግዶችን ለማገናኘት እየተዘጋጀ ነው።")}
+                {t("YeneSpot is being built to connect local businesses with customers searching for places and services in their city.", "YeneSpot á‰ áŠ¨á‰°áˆ›á‰¸á‹ á‹áˆµáŒ¥ á‰¦á‰³á‹Žá‰½áŠ•áŠ“ áŠ áŒˆáˆáŒáˆŽá‰¶á‰½áŠ• áŠ¨áˆšáˆáˆáŒ‰ á‹°áŠ•á‰ áŠžá‰½ áŒ‹áˆ­ áŠ áŠ«á‰£á‰¢á‹«á‹Š áŠ•áŒá‹¶á‰½áŠ• áˆˆáˆ›áŒˆáŠ“áŠ˜á‰µ áŠ¥á‹¨á‰°á‹˜áŒ‹áŒ€ áŠá‹á¢")}
               </p>
             </div>
 
             <div className="rounded-2xl border border-white/10 bg-white/5 p-7">
-              <span className="text-4xl">🌱</span>
+              <span className="text-4xl">ðŸŒ±</span>
 
               <h3 className="mt-4 text-xl font-bold text-white">
-                {t("Growing together, starting in Jimma.", "ከጅማ ጀምረን አብረን እናድግ።")}
+                {t("Growing together, starting in Jimma.", "áŠ¨áŒ…áˆ› áŒ€áˆáˆ¨áŠ• áŠ á‰¥áˆ¨áŠ• áŠ¥áŠ“á‹µáŒá¢")}
               </h3>
 
               <p className="mt-3 leading-7 text-white/70">
-                {t("Our business registration and owner dashboard will be introduced as the platform develops.", "መድረኩ እያደገ ሲሄድ የንግድ ምዝገባና የባለቤቶች ዳሽቦርድ ይቀርባሉ።")}
+                {t("Our business registration and owner dashboard will be introduced as the platform develops.", "áˆ˜á‹µáˆ¨áŠ© áŠ¥á‹«á‹°áŒˆ áˆ²áˆ„á‹µ á‹¨áŠ•áŒá‹µ áˆá‹áŒˆá‰£áŠ“ á‹¨á‰£áˆˆá‰¤á‰¶á‰½ á‹³áˆ½á‰¦áˆ­á‹µ á‹­á‰€áˆ­á‰£áˆ‰á¢")}
               </p>
             </div>
           </div>
@@ -521,22 +521,25 @@ async function HomeContent() {
       <footer className="border-t border-border bg-white">
         <div className="mx-auto flex max-w-7xl flex-col gap-5 px-5 py-9 sm:px-8 md:flex-row md:items-center md:justify-between">
           <div>
-            <p className="text-xl font-extrabold tracking-tight text-navy">
-              Yene<span className="text-green">Spot</span>
-              <span className="text-gold">.</span>
-            </p>
+            <Image
+              src="/brand/yenespot-horizontal-dark.svg"
+              alt="YeneSpot - Discover Your Place"
+              width={200}
+              height={60}
+              className="h-8 w-auto"
+            />
 
             <p className="mt-2 text-sm text-muted">
-              {t("Discover local. Support local.", "አካባቢያዊውን ያግኙ። አካባቢያዊውን ይደግፉ።")}
+              {t("Discover local. Support local.", "áŠ áŠ«á‰£á‰¢á‹«á‹Šá‹áŠ• á‹«áŒáŠ™á¢ áŠ áŠ«á‰£á‰¢á‹«á‹Šá‹áŠ• á‹­á‹°áŒá‰á¢")}
             </p>
           </div>
 
           <p className="text-sm text-muted">
-            {t("© YeneSpot. All rights reserved.", "© YeneSpot። መብቱ በሕግ የተጠበቀ ነው።")}
+            {t("Â© YeneSpot. All rights reserved.", "Â© YeneSpotá¢ áˆ˜á‰¥á‰± á‰ áˆ•áŒ á‹¨á‰°áŒ á‰ á‰€ áŠá‹á¢")}
           </p>
 
           <p className="text-sm font-medium text-green">
-            {t("Made for Ethiopia 🇪🇹", "ለኢትዮጵያ የተሰራ 🇪🇹")}
+            {t("Made for Ethiopia ðŸ‡ªðŸ‡¹", "áˆˆáŠ¢á‰µá‹®áŒµá‹« á‹¨á‰°áˆ°áˆ« ðŸ‡ªðŸ‡¹")}
           </p>
         </div>
       </footer>

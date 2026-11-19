@@ -34,7 +34,7 @@ export default async function BusinessServicesPage() {
         </p>
         <Link
           href="/business/dashboard"
-          className="mt-6 inline-block font-semibold text-[#173B35]"
+          className="mt-6 inline-block font-semibold text-[#173B35] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#173B35] focus-visible:ring-offset-2"
         >
           ← {t(language, "Back to dashboard", "ወደ ዳሽቦርድ ተመለስ")}
         </Link>
@@ -53,7 +53,7 @@ export default async function BusinessServicesPage() {
       <div className="mx-auto max-w-5xl px-6 py-10">
         <Link
           href="/business/dashboard"
-          className="text-sm font-semibold text-[#173B35] hover:underline"
+          className="text-sm font-semibold text-[#173B35] hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#173B35] focus-visible:ring-offset-2"
         >
           ← {t(language, "Back to dashboard", "ወደ ዳሽቦርድ ተመለስ")}
         </Link>
@@ -75,7 +75,7 @@ export default async function BusinessServicesPage() {
         </header>
 
         {error ? (
-          <div className="rounded-xl border border-red-200 bg-red-50 p-5 text-sm text-red-700">
+          <div role="alert" className="rounded-xl border border-red-200 bg-red-50 p-5 text-sm text-red-700">
             {t(
               language,
               "Could not load your services. Please refresh the page.",

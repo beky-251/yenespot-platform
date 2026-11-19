@@ -26,7 +26,7 @@ export default function ProfileForm({
   }
 
   const inputClass =
-    "mt-2 w-full rounded-xl border border-border bg-white px-4 py-3 text-sm text-navy outline-none focus:border-green";
+    "mt-2 w-full rounded-xl border border-border bg-white px-4 py-3 text-sm text-navy outline-none focus:border-green focus-visible:ring-2 focus-visible:ring-green focus-visible:ring-offset-2";
 
   return (
     <form action={handleSubmit} className="mt-8 space-y-6">
@@ -139,7 +139,7 @@ export default function ProfileForm({
       <button
         type="submit"
         disabled={isPending}
-        className="rounded-xl bg-green px-7 py-3 font-semibold text-white transition hover:bg-green/90 disabled:cursor-not-allowed disabled:opacity-60"
+        className="rounded-xl bg-green px-7 py-3 font-semibold text-white transition hover:bg-green/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-60"
       >
         {isPending ? "Saving changes..." : "Save profile"}
       </button>

@@ -30,7 +30,7 @@ export default function PasswordForm() {
           autoComplete="current-password"
           required
           maxLength={128}
-          className="w-full rounded-xl border border-border bg-white px-4 py-3 text-navy outline-none transition focus:border-green focus:ring-2 focus:ring-green/20"
+          className="w-full rounded-xl border border-border bg-white px-4 py-3 text-navy outline-none transition focus:border-green focus:ring-2 focus:ring-green/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green focus-visible:ring-offset-2"
         />
       </div>
 
@@ -49,7 +49,7 @@ export default function PasswordForm() {
           minLength={8}
           maxLength={128}
           required
-          className="w-full rounded-xl border border-border bg-white px-4 py-3 text-navy outline-none transition focus:border-green focus:ring-2 focus:ring-green/20"
+          className="w-full rounded-xl border border-border bg-white px-4 py-3 text-navy outline-none transition focus:border-green focus:ring-2 focus:ring-green/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green focus-visible:ring-offset-2"
         />
         <p className="mt-1 text-xs text-muted">
           Use at least 8 characters.
@@ -71,7 +71,7 @@ export default function PasswordForm() {
           minLength={8}
           maxLength={128}
           required
-          className="w-full rounded-xl border border-border bg-white px-4 py-3 text-navy outline-none transition focus:border-green focus:ring-2 focus:ring-green/20"
+          className="w-full rounded-xl border border-border bg-white px-4 py-3 text-navy outline-none transition focus:border-green focus:ring-2 focus:ring-green/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green focus-visible:ring-offset-2"
         />
       </div>
 
@@ -88,7 +88,7 @@ export default function PasswordForm() {
       <button
         type="submit"
         disabled={isPending}
-        className="rounded-xl bg-green px-6 py-3 text-sm font-bold text-white transition hover:bg-green/90 disabled:cursor-not-allowed disabled:opacity-60"
+        className="rounded-xl bg-green px-6 py-3 text-sm font-bold text-white transition hover:bg-green/90 disabled:cursor-not-allowed disabled:opacity-60 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green focus-visible:ring-offset-2"
       >
         {isPending ? "Changing password..." : "Change password"}
       </button>
